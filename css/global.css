@@ -54,6 +54,7 @@
 body {
     font-family: OpenSansRegular, Helvetica, sans-serif;
     font-size: 15px;
+    width: 1024px;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
@@ -66,7 +67,7 @@ body {
     box-sizing: border-box;
 }
 
-._clearfix:after {
+.clearfix:after {
     content: '';
     clear: both;
     display: block;
