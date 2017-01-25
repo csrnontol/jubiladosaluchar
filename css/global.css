@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import "fontawesome-icons/font-awesome.css";
+
+
+/*** Global Font-Face ***/
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url(typographic-fonts/OpenSans-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url(typographic-fonts/OpenSans-Bold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'OpenSansSemibold';
+    src: url(typographic-fonts/OpenSans-Semibold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'OpenSansItalic';
+    src: url(typographic-fonts/OpenSans-Italic.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url(typographic-fonts/OpenSans-Light.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 300;
+}
+.fregular {
+    font-family: 'OpenSansRegular', Helvetica, sans-serif;
+}
+.fbold {
+    font-family: 'OpenSansBold', Helvetica, sans-serif;
+}
+.fsemibold {
+    font-family: 'OpenSansSemibold', Helvetica, sans-serif;
+}
+.fitalic {
+    font-family: 'OpenSansItalic', Helvetica, sans-serif;
+}
+.flight {
+    font-family: 'OpenSansLight', Helvetica, sans-serif;
+}
+
+
+/*** Global Styles **/
+body {
+    font-family: OpenSansRegular, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #676767;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+._clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden; /*not to interfere with inputs*/
+}
+._width100 { width: 100%; }
+._width75 { width: 75%; }
+._width50 { width: 50%; }
+._floatNone { float: none; }
+._floatLeft { float: left; }
+._floatRight { float: right; }
+._alignCenter { text-align: center; }
+._alignLeft { text-align: left; }
+._alignRight { text-align: right; }
+._noSelect {
+    -webkit-user-select: none; /* Chrome all, Safari all */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox all */
+    -ms-user-select: none; /* IE 10+ */
+    -o-user-select: none; /* Opera */
+    user-select: none;
+}
+._curPointer { cursor: pointer; }
+._curDefault { cursor: default; }
+._contBox {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    box-sizing: content-box;
+}
+._radius3px {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+._radius5px {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+._radius10px {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+._td-u:hover {
+    text-decoration: underline;
+}
+._textNowrap {
+    white-space: nowrap;
+}
+._lbl-mode {
+    font-family: 'OpenSansSemibold', Helvetica, sans-serif;
+    display: inline-block;
+    cursor: default;
+}
