@@ -51,14 +51,19 @@
     </nav>
 </header>
 <main>
-    <section>
-        // Organizacion, Misión, Visión
+    <section class="organizacion-sesion">
+        <div class="organizacion">
+            // organizacion, mision, vision
+        </div>
+        <aside class="sesion-usuario">
+            // sesion del usuario
+        </aside>
     </section>
-    <aside>
-        // Sesión del usuario
-    </aside>
+    <section class="galeria">
+        // galeria de fotos
+    </section>
 </main>
-<footer>
+<footer class="main-footer">
     // footer
 </footer>
 </body>
