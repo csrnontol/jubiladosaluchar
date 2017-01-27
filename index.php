@@ -44,7 +44,7 @@
             <div>
                 <a href="">
                     <h4>Contáctenos</h4>
-                    <p>Ubícación y contacto</p>
+                    <p>Ubicación y contacto</p>
                 </a>
             </div>
         </div>
