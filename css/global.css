@@ -55,10 +55,21 @@ body {
     font-family: OpenSansRegular, Helvetica, sans-serif;
     font-size: 15px;
     width: 1024px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #f7f3ef;
+    color: #676767;
+}
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl, p {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #676767;
+}
+
+h1, h2, h3, h4, h5, h6,
+b, strong, th {
+    font-family: 'OpenSansSemibold', Helvetica, sans-serif;
 }
 
 * {

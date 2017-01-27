@@ -1,0 +1,39 @@
+
+/*** Main Header ***/
+.main-header {
+    margin-top: 10px;
+}
+.main-header .main-logo {
+    padding: 15px;
+}
+.main-header .main-logo a,
+.main-header .main-menu a {
+    text-decoration: none;
+}
+
+.main-header .main-logo img {
+    width: 200px;
+    height: auto;
+}
+.main-logo > div,
+.main-menu > div {
+    display: inline-block;
+}
+.main-header .main-logo,
+.main-header .main-menu {
+    text-align: center;
+}
+.main-logo > div .slogan {
+    font-size: 20px;
+}
+
+.main-header .main-menu {
+    margin: 30px 0;
+}
+.main-menu > div > div {
+    float: left;
+    margin-right: 70px;
+}
+.main-menu > div > div:last-child {
+    margin-right: 0;
+}
