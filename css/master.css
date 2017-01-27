@@ -1,5 +1,7 @@
 
+/*******************/
 /*** Main Header ***/
+/*******************/
 .main-header {
     margin-top: 10px;
 }
@@ -8,9 +10,9 @@
 }
 .main-header .main-logo a,
 .main-header .main-menu a {
+    display: block;
     text-decoration: none;
 }
-
 .main-header .main-logo img {
     width: 200px;
     height: auto;
@@ -25,10 +27,22 @@
 }
 .main-logo > div .slogan {
     font-size: 20px;
+    color: #70a994;
 }
 
 .main-header .main-menu {
-    margin: 30px 0;
+    margin: 20px 0;
+}
+.main-header .main-menu a {
+    color: #9a6f4d;
+    padding: 5px 15px;
+    border-bottom: 2px solid transparent;
+}
+.main-header .main-menu a:hover {
+    border-color: #af8053;
+}
+.main-header .main-menu a.active {
+    border-color: #af8053;
 }
 .main-menu > div > div {
     float: left;
@@ -37,3 +51,8 @@
 .main-menu > div > div:last-child {
     margin-right: 0;
 }
+
+
+/*******************/
+/*** Main Header ***/
+/*******************/

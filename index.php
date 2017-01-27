@@ -23,14 +23,14 @@
         <div>
             <a href="">
                 <img src="img/logo.png" alt="Logo de la Organización">
-                <h3 class="slogan">Jubilados a Luchar</h3>
+                <h1 class="slogan">Jubilados a Luchar</h1>
             </a>
         </div>
     </div>
     <nav class="main-menu">
         <div class="clearfix">
             <div>
-                <a href="">
+                <a href="" class="active">
                     <h4>¿Quiénes somos?</h4>
                     <p>Situación de los jubilados</p>
                 </a>
@@ -50,7 +50,7 @@
         </div>
     </nav>
 </header>
-<main>
+<main class="index-main-section">
     <section class="organizacion-sesion">
         <div class="organizacion">
             // organizacion, mision, vision
