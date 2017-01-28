@@ -51,7 +51,45 @@
 .main-menu > div > div:last-child {
     margin-right: 0;
 }
+.org_secciones{
+   /* border: 1px solid;*/
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    overflow: auto;
+    border-radius: 3px;
+    background-color: navajowhite;
+}
+.org_secciones h3{
+    width: 50%;
+    color: #70a994;
+}
+.org_secciones p{
+      float:left;
+    text-align: justify;
+  }
+.org_secciones img{
+    width: 130px;
+    height: 130px;
+    alignment: right;
+    margin: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
 
+}
+.info{
+    /*border:2px solid;*/
+    overflow: auto;
+    width: 70%;
+    float:left;
+    padding: 15px;
+}
+
+.organizacion-sesion{
+    width: 60%;
+}
 
 /*******************/
 /*** Main Header ***/
