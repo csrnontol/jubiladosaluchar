@@ -53,26 +53,36 @@
 <main class="index-main-section">
     <section class="organizacion-sesion">
         <div class="organizacion">
-            <div id="div-organizacion" class = "org_secciones">
+            <div id="div-organizacion" class="org_secciones">
                 <div class="info">
                     <h3>LA ORGANIZACIÓN</h3>
-                    <p>Organización sin fines de lucro, conformado por todo jubilado, que desee una pensión digna o sea buscar soluciones a la problemática de los jubilados del Perú.</p>
+                    <p>
+                        Organización sin fines de lucro, conformado por todo jubilado, que desee una pensión digna o sea
+                        buscar soluciones a la problemática de los jubilados del Perú.
+                    </p>
                 </div>
                 <img src="img/organizacion.png" >
             </div>
-            <div id="div-mision" class = "org_secciones">
+            <div id="div-mision" class="org_secciones">
                 <div class="info">
                     <h3>NUESTRA MISIÓN</h3>
-                    <p>Es luchar por lograr que los jubilados pongamos nuestros esfuerzos en lograr una pensión Digna, y que través del tiempo aumente conforme aumenta el costo de vida. Lo cual hace que los jubilados estemos organizados.  Y esta es la parte importante de la Misión, la organización de los jubilados del Perú. Ya que la pensión en el Perú, es antihumana, vergonzante.</p>
+                    <p>
+                        Es luchar por lograr que los jubilados pongamos nuestros esfuerzos en lograr una pensión Digna,
+                        y que través del tiempo aumente conforme aumenta el costo de vida. Lo cual hace que los jubilados
+                        estemos organizados.  Y esta es la parte importante de la Misión, la organización de los jubilados
+                        del Perú. Ya que la pensión en el Perú, es antihumana, vergonzante.
+                    </p>
                 </div>
-                <img src="img/Mision.png" >
+                <img src="img/mision.png" >
             </div>
-            <div id="div-vision" class = "org_secciones">
+            <div id="div-vision" class="org_secciones">
                 <div class="info">
                     <h3>NUESTRA VISIÓN</h3>
-                    <p>Lograr que los jubilados estén siempre organizados, para mantener siempre una pensión digna en el Perú.</p>
+                    <p>
+                        Lograr que los jubilados estén siempre organizados, para mantener siempre una pensión digna en el Perú.
+                    </p>
                 </div>
-                <img src="img/Vision.png" >
+                <img src="img/vision.png" >
             </div>
         </div>
         <aside class="sesion-usuario">

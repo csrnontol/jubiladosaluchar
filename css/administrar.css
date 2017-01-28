@@ -1,0 +1,29 @@
+
+/*** inputs ***/
+input[type=text], textarea {
+    display: block;
+}
+
+/**************************/
+/*** nuevo-articulo.php ***/
+/**************************/
+.div-nuevo-articulo {
+    width: 600px;
+    margin: 50px auto;
+}
+.div-nuevo-articulo .titulo {
+    text-align: center;
+    color: #4090de;
+    margin: 15px 0;
+}
+.div-nuevo-articulo form > div {
+    margin: 20px 0;
+}
+.div-nuevo-articulo input[type=text],
+.div-nuevo-articulo textarea {
+    width: 100%;
+}
+.div-nuevo-articulo .div-button {
+    margin-top: 50px;
+    text-align: center;
+}

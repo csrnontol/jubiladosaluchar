@@ -1,12 +1,13 @@
 
 /*******************/
-/*** Main Header ***/
+/*** main header ***/
 /*******************/
 .main-header {
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    padding: 10px 0;
 }
 .main-header .main-logo {
-    padding: 15px;
+    /*padding: 15px;*/
 }
 .main-header .main-logo a,
 .main-header .main-menu a {
@@ -14,7 +15,7 @@
     text-decoration: none;
 }
 .main-header .main-logo img {
-    width: 200px;
+    width: 175px;
     height: auto;
 }
 .main-logo > div,
@@ -51,13 +52,28 @@
 .main-menu > div > div:last-child {
     margin-right: 0;
 }
+
+
+
+/**************************/
+/*** sesion del usuario ***/
+/**************************/
+
+
+
+/*******************/
+/*** main footer ***/
+/*******************/
+
+
+
+/*****************/
+/*** index.php ***/
+/*****************/
 .org_secciones{
    /* border: 1px solid;*/
     margin: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 25px;
-    padding-bottom: 15px;
+    padding: 25px 10px 15px;
     overflow: auto;
     border-radius: 3px;
     background-color: navajowhite;
@@ -67,9 +83,9 @@
     color: #70a994;
 }
 .org_secciones p{
-      float:left;
+    float: left;
     text-align: justify;
-  }
+}
 .org_secciones img{
     width: 130px;
     height: 130px;
@@ -91,6 +107,8 @@
     width: 60%;
 }
 
-/*******************/
-/*** Main Header ***/
-/*******************/
+
+
+/****************************/
+/*** temas-de-interes.php ***/
+/****************************/
