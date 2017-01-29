@@ -2,6 +2,8 @@
 /*** inputs ***/
 input[type=text], textarea {
     display: block;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 /**************************/

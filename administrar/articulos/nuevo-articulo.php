@@ -26,7 +26,7 @@
 <body>
 <div class="div-nuevo-articulo">
     <h2 class="titulo">Nuevo ingreso de Artículo</h2>
-    <form action="" method="get">
+    <form id="alumno-form" action="" method="get">
         <div class="div-title">
             <label for="article-title">Título del artículo:</label>
             <input type="text" id="article-title" name="in-title">
@@ -43,6 +43,7 @@
             <span id="source-error"></span>
         </div>
         <div class="div-button">
+            <div class="general-errors"></div>
             <input type="submit" name="btn-submit" value="Ingresar Artículo" class="manage _gradientBtn">
         </div>
     </form>

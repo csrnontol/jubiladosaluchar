@@ -20,7 +20,7 @@
     <h2>Administrar Temas de Interés (artículos)</h2>
 </header>
 <main class="manage-body">
-    //lista de articulos
+    // lista de articulos
 </main>
 </body>
 </html>

@@ -78,7 +78,7 @@ b, strong, th, label {
     box-sizing: border-box;
 }
 
-/*** Input: Type Text, Number, Date and All Select ***/
+/*** inputs: type text, number, date and all select ***/
 input[type=text], input[type=number], input[type=password],
 input[type=email], input[type=date], input[type=time], select, textarea {
     -webkit-border-radius: 3px;
@@ -119,7 +119,22 @@ input[type=number] { padding-right: 2px !important; }
 }
 
 
-/*** Buttons ***/
+/*** elements outline focus style ***/
+a[href]:not([tabindex='-1']):focus,
+area[href]:not([tabindex='-1']):focus,
+input:not([disabled]):not([tabindex='-1']):focus,
+select:not([disabled]):not([tabindex='-1']):focus,
+textarea:not([disabled]):not([tabindex='-1']):focus,
+button:not([disabled]):not([tabindex='-1']):focus,
+iframe:not([tabindex='-1']):focus,
+[tabindex]:not([tabindex='-1']):focus,
+[contentEditable=true]:not([tabindex='-1']):focus {
+    /* your CSS for focusable elements goes here */
+    outline: #8fbde4 auto 2px;
+}
+
+
+/*** buttons ***/
 button, input[type=submit] {
     font-family: 'OpenSansSemibold', Helvetica, sans-serif;
     cursor: pointer;
@@ -158,7 +173,7 @@ button.manage, input[type=submit].manage {
     color: inherit;
     border: 1px solid #bbb1aa;
 }
-/*** End: Buttons ***/
+/*** end: buttons ***/
 
 
 .clearfix:after {
