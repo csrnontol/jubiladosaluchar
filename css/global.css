@@ -91,6 +91,7 @@ input[type=email], input[type=date], input[type=time], select, textarea {
 }
 textarea {
     height: auto;
+    resize: vertical;
 }
 input[type=text]:hover, input[type=number]:hover, input[type=password]:hover,
 input[type=date]:hover, input[type=time]:hover, select:hover, textarea:hover,
