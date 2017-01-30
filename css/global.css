@@ -235,3 +235,14 @@ button.manage, input[type=submit].manage {
     display: inline-block;
     cursor: default;
 }
+
+
+
+/************* ************ **************/
+/************* *ICONS FONT* **************/
+/************* ************ **************/
+.i-user, .i-key {
+    font-size: 22px;
+    line-height: 20px;
+    color: #b0b0b0;
+}

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-01-2017 a las 04:14:39
+-- Tiempo de generación: 28-01-2017 a las 22:05:28
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.5.34
 
@@ -46,6 +46,7 @@ CREATE TABLE `article` (
   `admin_id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` longtext NOT NULL,
+  `source` varchar(255) DEFAULT NULL,
   `date` datetime NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `active` tinyint(1) NOT NULL
