@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-01-2017 a las 22:05:28
+-- Tiempo de generación: 31-01-2017 a las 02:27:32
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.5.34
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `admin_id` int(11) NOT NULL,
   `name` varchar(40) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `username` varchar(15) NOT NULL,
   `password` varchar(255) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

@@ -42,10 +42,10 @@ class User {
     public function doLogin($table, $uname, $uemail, $upass) {
         $stmt = $this->conn->prepare("SELECT password FROM $table WHERE username = ? OR email = ?");
         $stmt->bind_param("ss", $uname, $uemail);
-        // $stmt->execute();
-        if ($stmt = $this->conn->query($stmt)) {
-            $admin_row = $stmt->fetch_assoc();
-            if ($stmt->num_rows == 1) {
+        if ($stmt->execute()) {
+            $res = $stmt->get_result();
+            $admin_row = $res->fetch_assoc();
+            if ($res->num_rows == 1) {
                 return (password_verify($upass, $admin_row['password']));
             } else {
                 return false;

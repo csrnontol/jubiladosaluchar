@@ -77,7 +77,7 @@ if (isset($_POST['btn-login'])) {
 ?>
 <div class="main-container-login">
     <div class="div-sesion-header">
-        <div class="div-sesion-header-title">Iniciar Sesión: Usuario del Sistema</div>
+        <div class="div-sesion-header-title">Iniciar Sesión: Administrador del Sistema</div>
         <div class="div-sesion-header-date"><?php echo strftime("(%d - %B - %Y)"); ?></div>
     </div>
     <div id="login-events"><?php echo $warning; ?></div>
@@ -105,7 +105,7 @@ if (isset($_POST['btn-login'])) {
         <div class="system-description">
             <hr>
             <div>
-                <span class="version">CRC-Academics 1.0 <span style="margin: 0 5px;">&vert;</span> 2016 &ndash; <?= date("Y");?>, Trujillo - Perú</span>
+                <span class="version">jubiladosaluchar.com <span style="margin: 0 5px;">&vert;</span> 2016 &ndash; <?= date("Y");?>, Trujillo - Perú</span>
                 <div class="sponsors">
                     <span>Compatible con: </span>&nbsp;&nbsp;<span>Chrome <i class="chrome-logo"></i></span>
                     <span>Firefox <i class="firefox-logo"></i></span>

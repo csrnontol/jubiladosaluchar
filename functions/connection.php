@@ -5,7 +5,8 @@
  * Date: 24/01/2017
  * Time: 11:44 PM
  */
-
+date_default_timezone_set('America/Lima');
+setlocale(LC_TIME, 'Spanish');
 function dbconnection() {
     $server = 'localhost';
     $database = 'jubiladosaluchar';
