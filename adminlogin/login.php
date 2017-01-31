@@ -30,7 +30,10 @@ else if (!$_POST['btn-login']) {
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Iniciar Sesión - Usuario del Sistema</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iniciar Sesión - Administrador del Sistema</title>
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/master.css">
     <link rel="stylesheet" type="text/css" href="../css/user-login.css">
@@ -75,7 +78,7 @@ if (isset($_POST['btn-login'])) {
     }
 }
 ?>
-<div class="main-container-login">
+<div class="main-container main-container-login">
     <div class="div-sesion-header">
         <div class="div-sesion-header-title">Iniciar Sesión: Administrador del Sistema</div>
         <div class="div-sesion-header-date"><?php echo strftime("(%d - %B - %Y)"); ?></div>
@@ -120,9 +123,6 @@ if (isset($_POST['btn-login'])) {
     /* Check if Tag is Empty */
     if ($("#login-events").is(':empty')){
         $("#login-events").css({'margin-bottom': 0});
-    }
-    if ($("#errors-login-form").is(':empty')){
-        $("#errors-login-form").css({'padding-bottom': 0, 'padding-top': 0});
     }
 </script>
 </body>
