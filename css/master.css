@@ -76,7 +76,11 @@
     padding: 25px 10px 15px;
     overflow: auto;
     border-radius: 3px;
-    background-color: navajowhite;
+    background: #af8053; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, lightgoldenrodyellow, #af8053); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, lightgoldenrodyellow, #af8053); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, lightgoldenrodyellow, #af8053); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, lightgoldenrodyellow, #af8053); /* Standard syntax */
 }
 .org_secciones h3{
     width: 50%;
@@ -104,11 +108,98 @@
 }
 
 .organizacion-sesion{
-    width: 60%;
+    width: 100%;
+}
+.organizacion-sesion div {
+    display: inline-block;
+}
+.sesion-usuario{
+    padding-top: 200px;
+    width: 25%;
+}
+.organizacion{
+        width: 70%;
+
+
+}
+.sesion-usuario{
+    justify-content: center;
+}
+.sesion-usuario form{
+    margin: 10px;
+}
+aside{
+    width: 20%;
+    display: inline;
+}
+.galeria{
+    width: 95%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient( #70a994 , lightgoldenrodyellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( #70a994, lightgoldenrodyellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient( #70a994, lightgoldenrodyellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient( #70a994 , lightgoldenrodyellow); /* Standard syntax */
+    border-radius: 5px;
+}
+
+main{
+
+    overflow: auto;
+
 }
 
 
-
+#contenedor-pie-de-pagina {
+    width: 100%;
+    font-size: 14px;
+    background-color: #474747;
+    color: white;
+}
+#div-pie-de-pagina {
+    position: relative;
+    display: table;
+    width: 960px;
+    height: auto;
+    margin: 20px auto 0 auto;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #eee;
+}
+#div-pie-de-pagina div:first-child {
+    position: absolute;
+    display: table-cell;
+    float: left;
+    min-height: 100px;
+    width: 220px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#div-pie-de-pagina h4 {
+    margin: 0;
+}
+#div-pie-de-pagina p {
+    line-height: normal;
+}
+#div-pie-de-pagina div { /*todos los div de #pie-de-pagina excepto el div con id="copyright"*/
+    display: inline-block;
+    margin-right: 25px;
+}
+#div-pie-de-pagina div:nth-of-type(2) { /*selecciono el tercer div del #pie-de-pagina*/
+    margin-right: 0 !important; /*forzar que el ultimo div(3) que no tenga margen*/
+}
+div#copyright { /*selecciono el ultimo div hijo del #pie-de-pagina*/
+    display: inline-block;
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    padding: 10px 0;
+    color: #adadad;
+}
 /****************************/
 /*** temas-de-interes.php ***/
 /****************************/
