@@ -965,7 +965,7 @@ function widgToolbar(theEditor)
 				break;
 				
 			case "italic":
-				this.addButton(this.theList.id + "ButtonItalic", "widgButtonItalic", "Cursiva", "italic");
+				this.addButton(this.theList.id + "ButtonItalic", "widgButtonItalic", "Cursivas", "italic");
 				
 				break;
 				

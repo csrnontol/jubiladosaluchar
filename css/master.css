@@ -54,6 +54,21 @@
 }
 
 
+/*** No-JS ***/
+.no-script{
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    background-color: #b05752;
+    text-align: center;
+    vertical-align: central;
+}
+.no-script a {
+    color: #e6ffbc;
+    border-bottom: 1px solid #edcd50;
+}
+
+
 
 /**************************/
 /*** sesion del usuario ***/

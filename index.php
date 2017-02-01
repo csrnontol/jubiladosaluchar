@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="css/jssor-slider.css">
 </head>
 <body>
-<header class="main-header">
+<header class="main-container main-header">
     <div class="main-logo">
         <div>
             <a href="">
@@ -52,7 +52,7 @@
         </div>
     </nav>
 </header>
-<main class="index-main-section">
+<main class="main-container index-main-section">
     <section class="organizacion-sesion">
         <div class="organizacion">
             <div id="div-organizacion" class="org_secciones">

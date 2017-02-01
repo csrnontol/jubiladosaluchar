@@ -53,12 +53,16 @@
 /*** Global Styles **/
 body {
     font-family: OpenSansRegular, Helvetica, sans-serif;
-    font-size: 15px;
-    width: 1024px;
+    font-size: 14px;
     margin: 0 auto;
     padding: 0;
     background-color: #f7f3ef;
     color: #585858;
+}
+body > .main-container {
+    display: block;
+    width: 1024px;
+    margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -88,9 +92,12 @@ input[type=email], input[type=date], input[type=time], select, textarea {
     padding: 4px 8px 4px; /*3px 8px 5px;*/
     color: inherit;
     border: 1px solid #d4d4d4;
+    font-size: inherit;
+    font-family: inherit;
 }
 textarea {
     height: auto;
+    resize: vertical;
 }
 input[type=text]:hover, input[type=number]:hover, input[type=password]:hover,
 input[type=date]:hover, input[type=time]:hover, select:hover, textarea:hover,
@@ -130,13 +137,14 @@ iframe:not([tabindex='-1']):focus,
 [tabindex]:not([tabindex='-1']):focus,
 [contentEditable=true]:not([tabindex='-1']):focus {
     /* your CSS for focusable elements goes here */
-    outline: #8fbde4 auto 2px;
+    outline: #90b6e4 auto 2px;
 }
 
 
 /*** buttons ***/
 button, input[type=submit] {
     font-family: 'OpenSansSemibold', Helvetica, sans-serif;
+    font-size: inherit;
     cursor: pointer;
     padding: 7px 10px 8px;
     background-color: #d8d8d8;
@@ -234,3 +242,17 @@ button.manage, input[type=submit].manage {
     display: inline-block;
     cursor: default;
 }
+<<<<<<< HEAD
+=======
+
+
+
+/************* ************ **************/
+/************* *ICONS FONT* **************/
+/************* ************ **************/
+.i-user, .i-key {
+    font-size: 22px;
+    line-height: 20px;
+    color: #b0b0b0;
+}
+>>>>>>> origin/master

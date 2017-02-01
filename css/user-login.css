@@ -1,0 +1,171 @@
+/**********************/
+/*** Log In Section ***/
+/**********************/
+.main-container-login {
+    width: 960px;
+    margin: 15px auto;
+    min-height: 450px;
+}
+.main-container-login input {
+    height: 35px;
+}
+.main-container-login #login-events {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #b05752;
+    margin-bottom: 15px;
+}
+.main-container-login .fieldset-login-section {
+    display: block;
+    width: 320px;
+    margin: 0 auto 150px;
+    border: 5px solid rgba(176, 176, 176, 0.1);
+    background-color: #e4e4e4;
+}
+.fieldset-login-section legend {
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #e4e4e4;
+    border: 3px solid rgba(176, 176, 176, 0.1);
+    color: #4c84bf;
+}
+.fieldset-login-section form {
+    display: block;
+    padding: 10px 20px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: inherit;
+}
+.main-container-login #errors-login-form {
+    display: block;
+    text-align: center;
+    padding: 0 0 5px;
+    color: #b05752;
+}
+.fieldset-login-section .login-form--user-name,
+.fieldset-login-section .login-form--password {
+    display: inline-block;
+    position: relative;
+}
+.fieldset-login-section .login-form--user-name span,
+.fieldset-login-section .login-form--password span {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    height: 20px;
+    margin-left: 5px;
+    padding-right: 3px;
+    border-right: 2px solid #bfbfbf;
+    pointer-events: none;
+}
+.main-container-login .fieldset-login-section label {
+    display: inline-block;
+    float: left;
+}
+.main-container-login .fieldset-login-section span {
+    display: inline-block;
+}
+.fieldset-login-section input {
+    display: block;
+    width: 300px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: inherit;
+    padding-left: 44px;
+    background-color: #fbfbfb;
+}
+.fieldset-login-section input:focus {
+    background-color: #fff;
+}
+.fieldset-login-section input:not(:focus) {
+    color: #808080;
+}
+.fieldset-login-section input:focus + span i {
+    color: #9d9d9d;
+}
+.fieldset-login-section button {
+    display: inline-block;
+    margin: 10px auto 0 auto;
+    padding: 5px 20px 6px;
+}
+.fieldset-login-section button:active {
+    padding: 6px 20px 5px;
+}
+
+.main-container-login .div-sesion-header {
+    display: block;
+    position: relative;
+    width: 600px;
+    height: auto;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto 40px auto;
+    background: #f4f4f4;
+    border: 1px solid #dddddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 10px -4px;
+    -moz-box-shadow: 0 0 10px -4px;
+    box-shadow: 0 0 10px -4px;
+}
+.div-sesion-header .div-sesion-header-title {
+    font-size: 15px;
+    font-family: 'OpenSansBold', Helvetica, sans-serif;
+}
+#missed-password--div-events {
+    margin-top: 10px;
+}
+#missed-password--div-events a {
+    font-size: 14px;
+    color: #696969;
+}
+
+/*** Account Confirmation ***/
+.account-confirmation--container {
+    max-width: 500px;
+    margin: 60px auto 0;
+}
+
+/*** Forgot Password ***/
+.frm-user-forgot-reset {
+    width: 280px;
+    margin: 50px auto 0;
+    padding: 10px 30px;
+    background-color: #f6f6f6;
+    -webkit-box-shadow: 0 1px 7px -3px;
+    -moz-box-shadow: 0 1px 7px -3px;
+    box-shadow: 0 1px 7px -3px;
+}
+.frm-user-forgot-reset .titles,
+.frm-user-forgot-reset .div-user-icon {
+    text-align: center;
+}
+.frm-user-forgot-reset .str-info {
+    font-size: 14px;
+    margin: 5px 0 -10px;
+}
+.frm-user-forgot-reset .div-user-icon > i {
+    font-size: 100px;
+    line-height: 90px;
+    color: #b3b3b3;
+}
+.frm-user-forgot-reset .div-user-icon > i:before {
+    line-height: 100px;
+}
+.frm-user-forgot-reset .div-fields > input {
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+.frm-user-forgot-reset button {
+    display: block;
+    margin: 15px auto 0;
+    padding: 3px 15px 4px;
+}
+.frm-user-forgot-reset button:active {
+    padding: 4px 15px 3px;
+}
