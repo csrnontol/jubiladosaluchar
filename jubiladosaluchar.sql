@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-01-2017 a las 02:27:32
+-- Tiempo de generación: 02-02-2017 a las 03:50:32
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.5.34
 
@@ -32,9 +32,17 @@ CREATE TABLE `admin` (
   `email` varchar(30) NOT NULL,
   `username` varchar(15) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `master` tinyint(1) DEFAULT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `active` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `name`, `email`, `username`, `password`, `master`, `timestamp`, `active`) VALUES
+(1, 'Francisco Domingo Córdova Armas', 'cnontolr@gmail.com', 'fdcordova', '$2y$10$V9CCsRO3iSql5uGFcm7DIeQEFNVnFikacNJ6EtPL./RnFCWt9Zy8y', 1, '2017-02-02 02:43:22', 1);
 
 -- --------------------------------------------------------
 
@@ -101,7 +109,8 @@ CREATE TABLE `user` (
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`admin_id`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indices de la tabla `article`
@@ -134,7 +143,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `article`
 --

@@ -56,7 +56,7 @@ if (isset($_POST['btn-login'])) {
         $user = $usuario; $pass = $senha;
         if (!$newUser->doLogin('admin', $user, $user, $pass)) {
             $sesion_error = 'Usuario y/o Contraseña incorrecto(s).';
-            $missed_pass = '<a href="forgotpass.php" class="_hyperlink">¿Olvidó su contraseña?</a>';
+            $missed_pass = '<a href="forgotpass.php">¿Olvidó su contraseña?</a>';
         } else {
             $admin_data = mysqli_query($conn, "SELECT * FROM admin WHERE username = '$user' OR email = '$user'");
             $admin_data = mysqli_fetch_assoc($admin_data);
@@ -68,6 +68,7 @@ if (isset($_POST['btn-login'])) {
                 $_SESSION['admin-name'] = $admin_data['name'];
                 $_SESSION['admin-username'] = $admin_data['username'];
                 $_SESSION['admin-email'] = $admin_data['email'];
+                $_SESSION['admin-master'] = $admin_data['master'];
                 /*redirect page*/
                 mysqli_close($conn);
                 if (isset($_GET['redirect'])) header('Location: ' . $_GET['redirect']);
@@ -79,23 +80,23 @@ if (isset($_POST['btn-login'])) {
 }
 ?>
 <div class="main-container main-container-login">
-    <div class="div-sesion-header">
-        <div class="div-sesion-header-title">Iniciar Sesión: Administrador del Sistema</div>
-        <div class="div-sesion-header-date"><?php echo strftime("(%d - %B - %Y)"); ?></div>
+    <div class="div-special-header" style="width: 600px;">
+        <div class="header-title">Iniciar Sesión: Administrador del Sistema</div>
+        <div class="header-date"><?php echo strftime("(%d - %B - %Y)"); ?></div>
     </div>
-    <div id="login-events"><?php echo $warning; ?></div>
+    <div id="login-events"><?= $warning;?></div>
     <fieldset class="fieldset-login-section _radius5px">
         <legend class="_radius10px">Iniciar sesión para ingresar al sistema</legend>
         <form id="admin-login-form" method="post" action="" autocomplete="off">
-            <div id="errors-login-form"><?php echo $sesion_error; ?></div>
-            <label for="usuario-login"><span>Usuario:</span></label>
+            <div id="errors-login-form"><?= $sesion_error;?></div>
+            <label for="usuario-login">Nombre de usuario:</label>
             <div class="login-form--user-name">
-                <input type="text" id="usuario-login" name="usuario-login" maxlength="100" value="<?= $user;?>" placeholder="nombre de usuario o e-mail" autofocus>
+                <input type="text" id="usuario-login" name="usuario-login" maxlength="100" value="<?= $user;?>" placeholder="usuario o e-mail" autofocus>
                 <span><i class="fa fa-user fa-fw i-user"></i></span>
             </div>
-            <label for="password-login"><span>Contraseña:</span></label>
+            <label for="password-login">Contraseña:</label>
             <div class="login-form--password">
-                <input type="password" id="password-login" name="password-login" maxlength="15" value="<?= $pass;?>" placeholder="contraseña de administrador">
+                <input type="password" id="password-login" name="password-login" maxlength="15" value="<?= $pass;?>" placeholder="ingresar contraseña">
                 <span><i class="fa fa-key fa-fw i-key"></i></span>
             </div>
             <button id="btn-login" name="btn-login">Ingresar</button>
@@ -103,7 +104,7 @@ if (isset($_POST['btn-login'])) {
         </form>
     </fieldset>
 </div>
-<footer class="main-footer no-print-this">
+<footer class="main-footer">
     <div class="content">
         <div class="system-description">
             <hr>

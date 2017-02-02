@@ -1,3 +1,28 @@
+.insert-item--processing-gif {
+    display: none;
+    position: absolute;
+    width: 140px;
+    height: 20px;
+    margin: 0 auto;
+    top: 5px;
+    left: 0;
+    right: 0;
+    background: transparent url(../img/loading.gif) no-repeat right center;
+    z-index: 2;
+}
+.mastercn-insertitem-form--overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0.1;
+    filter: alpha(Opacity=10);
+    z-index: 10;
+}
+
 
 /*******************/
 /*** main header ***/
@@ -54,7 +79,7 @@
 }
 
 
-/*** No-JS ***/
+/*** no js mode ***/
 .no-script{
     color: #fff;
     padding: 10px;
@@ -66,6 +91,27 @@
 .no-script a {
     color: #e6ffbc;
     border-bottom: 1px solid #edcd50;
+}
+
+/*** special header ***/
+.div-special-header {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto 10px;
+    background: #f4f4f4;
+    border: 1px solid #dddddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 10px -4px;
+    -moz-box-shadow: 0 0 10px -4px;
+    box-shadow: 0 0 10px -4px;
+}
+.div-special-header .header-title {
+    font-family: 'OpenSansSemibold', Helvetica, sans-serif;
+    font-size: 15px;
 }
 
 

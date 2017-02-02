@@ -95,27 +95,6 @@
     padding: 6px 20px 5px;
 }
 
-.main-container-login .div-sesion-header {
-    display: block;
-    position: relative;
-    width: 600px;
-    height: auto;
-    text-align: center;
-    padding: 5px;
-    margin: 0 auto 40px auto;
-    background: #f4f4f4;
-    border: 1px solid #dddddd;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 0 10px -4px;
-    -moz-box-shadow: 0 0 10px -4px;
-    box-shadow: 0 0 10px -4px;
-}
-.div-sesion-header .div-sesion-header-title {
-    font-size: 15px;
-    font-family: 'OpenSansBold', Helvetica, sans-serif;
-}
 #missed-password--div-events {
     margin-top: 10px;
 }
@@ -166,6 +145,81 @@
     margin: 15px auto 0;
     padding: 3px 15px 4px;
 }
-.frm-user-forgot-reset button:active {
+.frm-user-forgot-reset button:not(._btnDisabled):active {
     padding: 4px 15px 3px;
+}
+
+
+
+/************************************/
+/*** Nuevo Usuario (new-user.php) ***/
+/************************************/
+.insert-new-item--div-container {
+    margin-top: 30px;
+}
+.insert-new-item--div-container.nuevo-usuario {
+    width: 800px;
+    margin: 30px auto;
+}
+.nuevo-usuario-section > div,
+.nuevo-usuario-section > main {
+    float: left;
+}
+.nuevo-usuario-section > div {
+    width: 270px;
+    margin-right: 30px;
+}
+.nuevo-usuario-section > main {
+    width: 500px;
+}
+.insert-new-item--div-container .back-to-index {
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+.insert-new-item--div-container .nuevo-usuario-section {
+    margin-top: 50px;
+}
+
+/*fields*/
+form#frm-nuevo-usuario > div {
+    width: 100%;
+    font-size: 0;
+}
+form#frm-nuevo-usuario > div > div {
+    display: inline-block;
+    width: 240px;
+    vertical-align: top;
+    font-size: 14px;
+}
+form#frm-nuevo-usuario > div > div:first-child {
+    margin-right: 20px;
+}
+form#frm-nuevo-usuario input[type=text],
+form#frm-nuevo-usuario input[type=email],
+form#frm-nuevo-usuario input[type=password],
+form#frm-nuevo-usuario select {
+    width: 100%;
+}
+form#frm-nuevo-usuario span[id^=error-] {
+    display: block;
+    width: 100%;
+    padding: 2px 0 5px;
+    height: 25px;
+    text-align: center;
+    color: #bd665c;
+}
+
+form#frm-nuevo-usuario .button-section {
+    position: relative;
+    text-align: center;
+}
+form#frm-nuevo-usuario .button-section #divbtn-submit-usuario {
+    background-color: #cde2d2;
+    border-color: #bbcabe;
+    width: auto;
+    margin: 30px 0 0;
+}
+form#frm-nuevo-usuario .button-section #divbtn-submit-usuario:hover {
+    background-color: #c4dac9;
+    border-color: #9ebda5;
 }
