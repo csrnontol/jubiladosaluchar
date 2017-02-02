@@ -72,9 +72,12 @@ ul, ol, dl, p {
 }
 
 h1, h2, h3, h4, h5, h6,
-b, strong, th, label {
+b, strong, th, label, optgroup {
     font-family: 'OpenSansSemibold', Helvetica, sans-serif;
+    font-weight: normal;
 }
+
+a { text-decoration: none; }
 
 * {
     -webkit-box-sizing: border-box;
@@ -166,6 +169,13 @@ button:hover, input[type=submit]:hover {
 button:active, input[type=submit]:active {
     padding: 8px 10px 7px;
 }
+button._btnDisabled, input[type=submit]._btnDisabled,
+button._btnDisabled:hover, input[type=submit]._btnDisabled:hover {
+    opacity: 0.5;
+    background-color: #d8d8d8;
+    color: inherit;
+    border: 1px solid #b2b2b2;
+}
 ._gradientBtn {
     background-image: -webkit-linear-gradient(top, transparent, rgba(173, 173, 173, 0.2));
     background-image: -moz-linear-gradient(top, transparent, rgba(173, 173, 173, 0.2));
@@ -181,7 +191,55 @@ button.manage, input[type=submit].manage {
     color: inherit;
     border: 1px solid #bbb1aa;
 }
+
+._lnkbtn {
+    font-family: 'SourceSansPro', Helvetica, sans-serif;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    color: inherit !important;
+}
+._thin-btn {
+    font-family: 'OpenSansSemibold', Helvetica, sans-serif;
+    display: inline-block;
+    padding: 3px 10px 4px;
+    border: 1px solid;
+    -webkit-transition: box-shadow 0.3s, background-color 0.3s;
+    -moz-transition: box-shadow 0.3s, background-color 0.3s;
+    -ms-transition: box-shadow 0.3s, background-color 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+._thin-btn:hover {
+    -webkit-box-shadow: 0 0 7px rgba(181, 181, 181, 0.59);
+    -moz-box-shadow: 0 0 7px rgba(181, 181, 181, 0.59);
+    box-shadow: 0 0 7px rgba(181, 181, 181, 0.59);
+}
+._thin-btn:active {
+    padding: 4px 10px 3px;
+}
 /*** end: buttons ***/
+
+
+/* default links style */
+._hyperlink {
+    color: #167ac6;
+    cursor: pointer;
+}
+._hyperlink:hover {
+    text-decoration: underline;
+}
+._inherit-hover-link {
+    color: inherit;
+}
+._inherit-hover-link:hover {
+    color: #167ac6;
+}
 
 
 .clearfix:after {
