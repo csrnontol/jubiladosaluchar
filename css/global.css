@@ -60,8 +60,7 @@ body {
     color: #585858;
 }
 body > .main-container {
-    display: block;
-    width: 1024px;
+    display: block;    
     margin: 0 auto;
 }
 

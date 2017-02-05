@@ -13,7 +13,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Documento</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -101,77 +101,68 @@
     </section>
     <section class="galeria">
         <!-- .:: imagenes deslizables ::. -->
-        <div id="jssor_1" style="float: center; position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 500px; overflow: hidden; visibility: hidden;">
-            <div id="aaa" data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 500px; overflow: hidden;">
-                <div style="display: none;">
-                    <img data-u="image" src="img/galeria/01.png" />
-                   <!-- <div data-u="caption" data-t="4" style="position: absolute; top: 30px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Responsabilidad</div>-->
+        <div id="galeria-contenedor" >
+            <h1>Galería de Fotos</h1>
+            <div id="linea"></div>
+            <div class="grupo-fotos">
+                <div>
+                    <img data-u="image" src="img/galeria/01.png" />  
+                    <span>Descripción 1 : Todos reunidos.</span>           
                 </div>
-                <div style="display: none;">
-                    <img data-u="image" src="img/galeria/02.png" />
-                    <!--<div data-u="caption" data-t="6" style="position: absolute; top: 30px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Compromiso</div>-->
+                <div>
+                    <img data-u="image" src="img/galeria/02.png" />   
+                    <span>Descripción 1 : Todos reunidos.</span>                 
                 </div>
-                <div style="display: none;">
-                    <img data-u="image" src="img/galeria/03.png" />
-                    <!--<div data-u="caption" data-t="2" style="position: absolute; top: 30px; left: -380px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Puntualidad</div>-->
+                <div>
+                    <img data-u="image" src="img/galeria/03.png" />  
+                    <span>Descripción 1 : Todos reunidos.</span>                  
                 </div>
-                <div style="display: none;">
+            </div>
+            <div class="grupo-fotos">
+                <div>
                     <img data-u="image" src="img/galeria/04.png" />
-
+                    <span>Descripción 1 : Todos reunidos.</span>   
                 </div>
-                <div style="display: none;">
+                <div>
                     <img data-u="image" src="img/galeria/05.png" />
-
+                    <span>Descripción 1 : Todos reunidos.</span>   
                 </div>
-                <div style="display: none;">
+                <div>
                     <img data-u="image" src="img/galeria/06.png" />
-
+                    <span>Descripción 1 : Todos reunidos.</span>   
                 </div>
-                <div style="display: none;">
+            </div>
+            <div class="grupo-fotos">
+                <div>
                     <img data-u="image" src="img/galeria/07.png" />
-
+                    <span>Descripción 1 : Todos reunidos.</span>   
                 </div>
-                <div style="display: none;">
+                <div>
                     <img data-u="image" src="img/galeria/08.png" />
-
+                    <span>Descripción 1 : Todos reunidos.</span>   
                 </div>
-                <div style="display: none;">
+                <div>
                     <img data-u="image" src="img/galeria/09.png" />
-
+                    <span>Descripción 1 : Todos reunidos.</span>   
                 </div>
-                <div style="display: none;">
+            </div>
+            <div class="grupo-fotos">
+                <div>
                     <img data-u="image" src="img/galeria/10.png" />
-
+                    <span>Descripción 1 : Todos reunidos.</span>   
                 </div>
-                <div style="display: none;">
+                <div>
                     <img data-u="image" src="img/galeria/11.png" />
-
+                    <span>Descripción 1 : Todos reunidos.</span>   
                 </div>
-                <div style="display: none;">
+                <div>
                     <img data-u="image" src="img/galeria/12.png" />
+                    <span>Descripción 1 : Todos reunidos.</span>   
+                </div> 
+            </div>             
+        </div>
 
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" src="img/galeria/13.png" />
-
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" src="img/galeria/14.png" />
-
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" src="img/galeria/15.png" />
-
-                </div>-->
-            </div>
-
-            <!-- Bullet Navigator -->
-            <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
-                <div data-u="prototype" style="width:12px;height:12px;"></div>
-            </div>
-            <!-- Arrow Navigator -->
-            <span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
-            <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+            
         </div>
         <!-- .:: fin: imagenes deslizables ::. -->
 
@@ -243,7 +234,7 @@
     </div>
 </footer>
 </body>
-<script type="text/javascript" src="functions/jquery-1.11.1.js"></script>
-<script type="text/javascript" src="functions/jssor.slider.mini.js"></script>
-<script type="text/javascript" src="functions/jssor-slider.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+<script type="text/javascript" src="js/jssor-slider.js"></script>
 </html>
