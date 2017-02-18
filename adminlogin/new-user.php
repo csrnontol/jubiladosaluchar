@@ -19,7 +19,7 @@ if (!isset($_SESSION['admin-id']) || $_SESSION['admin-master'] != 1) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nuevo Administrador del Sistema</title>
+    <title>Ingresar Nuevo Administrador del Sistema</title>
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/master.css">
     <link rel="stylesheet" type="text/css" href="../css/user-login.css">
@@ -46,31 +46,31 @@ if (!isset($_SESSION['admin-id']) || $_SESSION['admin-master'] != 1) {
                         <div class="user-name" style="width: 380px;">
                             <label for="in-user-name">Nombres:</label>
                             <input type="text" name="in-user-name" id="in-user-name" maxlength="40">
-                            <span id="error-name" class="err-data-to-insert"></span>
+                            <span id="error-name"></span>
                         </div>
                     </div>
                     <div class="email-username">
                         <div class="user-username">
                             <label for="in-user-username">Nombre de usuario:</label>
                             <input type="text" name="in-user-username" id="in-user-username" data-unique="true" maxlength="20">
-                            <span id="error-username" class="err-data-to-insert"></span>
+                            <span id="error-username"></span>
                         </div>
                         <div class="user-email">
                             <label for="in-user-email">E-mail:</label>
                             <input type="email" name="in-user-email" id="in-user-email" data-unique="true">
-                            <span id="error-email" class="err-data-to-insert"></span>
+                            <span id="error-email"></span>
                         </div>
                     </div>
                     <div class="pass-repass">
                         <div class="user-password">
                             <label for="in-user-password">Contraseña:</label>
                             <input type="password" name="in-user-password" id="in-user-password" maxlength="15">
-                            <span id="error-password" class="err-data-to-insert"></span>
+                            <span id="error-password"></span>
                         </div>
                         <div class="user-repassword">
                             <label for="in-user-repassword">Repetir contraseña:</label>
                             <input type="password" name="in-user-repassword" id="in-user-repassword" maxlength="15">
-                            <span id="error-repassword" class="err-data-to-insert"></span>
+                            <span id="error-repassword"></span>
                         </div>
                     </div>
                     <div class="button-section">

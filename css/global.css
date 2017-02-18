@@ -56,13 +56,21 @@ body {
     font-size: 14px;
     margin: 0 auto;
     padding: 0;
-    background-color: #f7f3ef;
+    background-color: #fff;
+    background-color: rgba(191, 182, 172, 0.2);
     color: #585858;
 }
-body > .main-container {
+body._bgi {
+    background-image: url("../img/textura.png");
+}
+body > ._main-container, ._optimizedWidth {
     display: block;
     width: 1024px;
     margin: 0 auto;
+}
+body ._main-content {
+    display: block;
+    width: 705px;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -75,6 +83,10 @@ h1, h2, h3, h4, h5, h6,
 b, strong, th, label, optgroup {
     font-family: 'OpenSansSemibold', Helvetica, sans-serif;
     font-weight: normal;
+}
+
+em {
+    font-family: 'OpenSansItalic', Helvetica, sans-serif;
 }
 
 a { text-decoration: none; }
@@ -127,6 +139,9 @@ input[type=number] { padding-right: 2px !important; }
     -moz-text-align-last: center;
     text-align-last: center;
 }
+input[type=radio], input[type=checkbox] {
+    vertical-align: -10%;
+}
 
 
 /*** elements outline focus style ***/
@@ -152,7 +167,7 @@ button, input[type=submit] {
     padding: 7px 10px 8px;
     background-color: #d8d8d8;
     color: inherit;
-    border: 1px solid #b2b2b2;
+    border: 1px solid #d0d0d0;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -162,9 +177,9 @@ button, input[type=submit] {
     transition: background-color .2s ease-out, background-image .2s ease-out;
 }
 button:hover, input[type=submit]:hover {
-    background-color: #7c7c7c;
-    color: #fff;
-    border: 1px solid #fff;
+    background-color: #e1e1e1;
+    /*color: #fff;*/
+    /*border: 1px solid #fff;*/
 }
 button:active, input[type=submit]:active {
     padding: 8px 10px 7px;
@@ -175,6 +190,7 @@ button._btnDisabled:hover, input[type=submit]._btnDisabled:hover {
     background-color: #d8d8d8;
     color: inherit;
     border: 1px solid #b2b2b2;
+    cursor: default;
 }
 ._gradientBtn {
     background-image: -webkit-linear-gradient(top, transparent, rgba(173, 173, 173, 0.2));
@@ -202,7 +218,7 @@ button.manage, input[type=submit].manage {
 ._thin-btn {
     font-family: 'OpenSansSemibold', Helvetica, sans-serif;
     display: inline-block;
-    padding: 3px 10px 4px;
+    padding: 3px 15px 4px;
     border: 1px solid;
     -webkit-transition: box-shadow 0.3s, background-color 0.3s;
     -moz-transition: box-shadow 0.3s, background-color 0.3s;
@@ -221,7 +237,25 @@ button.manage, input[type=submit].manage {
     box-shadow: 0 0 7px rgba(181, 181, 181, 0.59);
 }
 ._thin-btn:active {
-    padding: 4px 10px 3px;
+    padding: 4px 15px 3px;
+}
+._btnUserLogin {
+    padding: 4px 20px 5px;
+    background-color: #d8986d;
+    color: white;
+    border: none;
+}
+._btnUserLogin:hover {
+    background-color: #e09d72;
+    -webkit-box-shadow: 0 0 10px -2px #7c7c7c;
+    -moz-box-shadow: 0 0 10px -2px #7c7c7c;
+    box-shadow: 0 0 10px -2px #7c7c7c;
+}
+._btnUserLogin:active {
+    padding: 5px 20px 4px;
+    -webkit-box-shadow: inset -1px -1px 2px #7c7c7c;
+    -moz-box-shadow: inset -1px -1px 2px #7c7c7c;
+    box-shadow: inset -1px -1px 2px #7c7c7c;
 }
 /*** end: buttons ***/
 
@@ -300,14 +334,58 @@ button.manage, input[type=submit].manage {
     display: inline-block;
     cursor: default;
 }
+._main-blue-title {
+    text-align: center;
+    color: #4090de;
+}
+._formGrayShadow {
+    -webkit-box-shadow: 0 1px 7px -3px;
+    -moz-box-shadow: 0 1px 7px -3px;
+    box-shadow: 0 1px 7px -3px;
+}
+.body-dark-bg {
+    background-color: #c1c1c1;
+}
 
+
+/*** alerts messages ***/
+.successAlert {
+    background-color: #dcf1df;
+    border-color: #bbdeca;
+    color: #78b38b;
+}
+.errorAlert {
+    background-color: #f9e4e4;
+    border-color: #e4c0c0;
+    color: #b96f6f;
+}
+.infoAlert {
+    background-color: #e7f0f9;
+    border-color: #9dbcdc;
+    color: #71a8d8;
+}
+.warningAlert {
+    background-color: #f1eee5;
+    border-color: #d4d1c8;
+    color: #c1b691;
+}
+.grayAlert {
+    background-color: #f1f1f1;
+    border-color: #dadada;
+    color: #969696;
+}
 
 
 /************* ************ **************/
 /************* *ICONS FONT* **************/
 /************* ************ **************/
 .i-user, .i-key {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 20px;
     color: #b0b0b0;
+}
+.i-warning-item-status {
+    color: #dcc775;
+    font-size: 3em;
+    line-height: 70px;
 }

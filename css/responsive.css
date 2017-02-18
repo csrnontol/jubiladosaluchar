@@ -1,0 +1,227 @@
+@media only screen and (max-width: 960px) {
+    body {
+        width: 100%;
+    }
+    .main-header{
+        height: auto;
+        overflow: initial;
+    }
+    .main-header .main-logo,
+    .main-header .main-menu {
+        width: 95%;
+    }
+    /*fin: pie de pagina*/
+}
+
+
+/* Responsive Tablet Sizes */
+@media only screen and (max-width: 770px) {
+
+    body {
+        width: 98%;
+    }
+    footer .centered {
+        flex-wrap: wrap;
+    }
+    footer .centered  .footer-logo {
+        max-width:250px;
+        width:50%
+    }
+    footer .centered .footer-contact {
+        width:50%;
+        padding:0 20px;
+    }
+    footer .centered .footer-navigation {
+        width: 95%;
+    }
+    footer .centered .footer-navigation  .footer-links-holder {
+        padding:0 20px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        width: 97%;
+    }
+
+    header .main-menu > div > div {
+        float: none;
+        margin-right: 0px;
+    }
+
+    header .main-header .main-logo {
+        width: 100%;
+        text-align: center;
+    }
+    main .organizacion-sesion .organizacion {
+        width: 100%;
+    }
+    main .organizacion-sesion .organizacion .org_secciones .info{
+        width: 70%;
+    }
+    main .organizacion-sesion .sesion-usuario{
+        padding-top: 0px;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+    section #galeria-contenedor .grupo-fotos div{
+        height: auto;
+
+    }
+    section #galeria-contenedor .grupo-fotos div img{
+        height: 100px;
+    }
+    main .organizacion-sesion div .org_secciones img{
+        align: center;
+    }
+
+    /*Contactenos*/
+    main .contacto-ubicacion{
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Responsive Mobile Sizes */
+@media only screen and (max-width: 575px) {
+
+    body {
+        width: 98%;
+    }
+
+    header .main-menu > div > div {
+        float: none;
+        /* margin-right: 70px;*/
+    }
+
+    .main-menu > div > div a p{
+        display: none;
+        /* margin-right: 70px;*/
+    }
+    .main-menu > div > div {
+        margin-right: 0px;
+    }
+    .main-header .main-logo,
+    .main-header .main-menu {
+        width: 100%;
+    }
+    .main-header .main-logo div {
+        width: 100%;
+    }
+    main .organizacion-sesion div {
+        display: block;
+        width: 100%;
+    }
+
+    main .organizacion-sesion .organizacion .org_secciones .info{
+        width: 100%;
+        float:none;
+    }
+
+    main .organizacion-sesion .organizacion .org_secciones p{
+        float: none;
+    }
+
+    main .organizacion-sesion .organizacion .org_secciones{
+        float:none;
+        width: 100%;
+    }
+
+    .sesion-usuario{
+        padding-top: 0px;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .sesion-usuario form{
+        padding-top: 0px;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+
+    section #galeria-contenedor .grupo-fotos div{
+        float: left;
+        width: 100%;
+        height: auto;
+        /*border: 3px solid red;*/
+        margin-right: 0;
+        margin-top: 5px;
+
+    }
+    section #galeria-contenedor .grupo-fotos  div img{
+        width: 100%;
+        height: auto;
+        /*border: 3px solid blue;*/
+        box-shadow: 2px 3px 5px #888888;
+        border-radius: 2px;
+    }
+    footer .centered .footer-logo {
+        width:100%;
+        margin:0 auto;
+    }
+    footer .centered .footer-contact {
+        width:100%;
+    }
+
+    footer .centered .footer-navigation .footer-links-holder {
+        width: 100%;
+        padding: 0;
+    }
+    footer .centered .footer-navigation .footer-links-holder  h3 {
+        margin: 0;
+        padding: 10px 20px;
+        border-top: #000 1px solid;
+        cursor: pointer;
+    }
+    /* Down Arrows */
+    footer .centered .footer-navigation .footer-links-holder  h3::after {
+        float: right;
+        margin-right: 10px;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 7px;
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        -webkit-transition: transform .5s;
+        transition: transform .5s;
+    }
+
+
+    footer .centered .footer-navigation .footer-links-holder .footer-links {
+        max-height: 0;
+        overflow: hidden;
+        padding:0 20px;
+    }
+
+    footer .centered .footer-navigation .footer-links-holder .active h3::after {
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    footer .centered .footer-navigation .footer-links-holder .active h3::after .footer-links {
+        max-height: 10000px;
+    }
+}
+
+/*** celulares pequeños ***/
+@media only screen and (max-width: 400px) {
+    main .organizacion-sesion .organizacion .org_secciones img{
+        display: none;
+
+    }
+
+    section #galeria-contenedor .grupo-fotos  div span{
+        display: none;
+    }
+}

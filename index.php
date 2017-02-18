@@ -5,6 +5,7 @@
  * Date: 25/01/2017
  * Time: 12:49 PM
  */
+session_start();
 ?>
 <!doctype html>
 <html lang="es-PE">
@@ -13,45 +14,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Jubilados a Luchar | Página de inicio</title>
+    <script type="text/javascript" src="tools/slimbox/ac-run-active-content.js"></script>
+    <script type="text/javascript" src="tools/slimbox/jquery-min-slimbox.js"></script>
+    <script type="text/javascript" src="tools/slimbox/slimbox.js"></script>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="tools/slimbox/slimbox.css">
 </head>
-<body>
-<header class="main-container main-header">
-    <div class="main-logo">
-        <div>
-            <a href="">
-                <img src="img/logo.png" alt="Logo de la Organización">
-                <h1 class="slogan">Jubilados a Luchar</h1>
-            </a>
-        </div>
-    </div>
-    <nav class="main-menu">
-        <div class="clearfix">
-            <div>
-                <a href="" class="active">
-                    <h4>¿Quiénes somos?</h4>
-                    <p>Situación de los jubilados</p>
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    <h4>Aportes y opiniones</h4>
-                    <p>La jubilación en el país</p>
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    <h4>Contáctenos</h4>
-                    <p>Ubicación y contacto</p>
-                </a>
-            </div>
-        </div>
-    </nav>
-</header>
-<main class="main-container index-main-section">
-    <section class="organizacion-sesion">
+<body class="_bgi">
+<?php
+include_once 'tools/main-header.php';
+echoMainHeader();
+?>
+<main class="_main-container index-main-section">
+    <section class="content-mainsection organizacion-sesion">
         <div class="organizacion">
             <div id="div-organizacion" class="org_secciones">
                 <div class="info">
@@ -86,15 +63,102 @@
             </div>
         </div>
         <aside class="sesion-usuario">
-            // sesion del usuario
+            <?php
+            include_once 'tools/user-aside-login.php';
+            ?>
         </aside>
     </section>
     <section class="galeria">
-        // galeria de fotos
+        <div id="galeria-contenedor" >
+            <h1>Galería de Fotos</h1>
+            <div id="linea"></div>
+            <div class="grupo-fotos">
+                <div>
+                    <a href="img/galeria/01.png" rel="lightbox">
+                        <img src="img/galeria/01.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+                <div>
+                    <a href="img/galeria/02.png" rel="lightbox">
+                        <img src="img/galeria/02.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+                <div>
+                    <a href="img/galeria/03.png" rel="lightbox">
+                        <img src="img/galeria/03.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+            </div>
+            <div class="grupo-fotos">
+                <div>
+                    <a href="img/galeria/04.png" rel="lightbox">
+                        <img src="img/galeria/04.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+                <div>
+                    <a href="img/galeria/05.png" rel="lightbox">
+                        <img src="img/galeria/05.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+                <div>
+                    <a href="img/galeria/06.png" rel="lightbox">
+                        <img src="img/galeria/06.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+            </div>
+            <div class="grupo-fotos">
+                <div>
+                    <a href="img/galeria/07.png" rel="lightbox">
+                        <img src="img/galeria/07.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+                <div>
+                    <a href="img/galeria/08.png" rel="lightbox">
+                        <img src="img/galeria/08.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+                <div>
+                    <a href="img/galeria/09.png" rel="lightbox">
+                        <img src="img/galeria/09.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+            </div>
+            <div class="grupo-fotos">
+                <div>
+                    <a href="img/galeria/10.png" rel="lightbox">
+                        <img src="img/galeria/10.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+                <div>
+                    <a href="img/galeria/11.png" rel="lightbox">
+                        <img src="img/galeria/11.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+                <div>
+                    <a href="img/galeria/12.png" rel="lightbox">
+                        <img src="img/galeria/12.png" />
+                    </a>
+                    <span>Descripción 1 : Todos reunidos.</span>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
-<footer class="main-footer">
-    // footer
-</footer>
+<?php
+include_once 'tools/main-footer.php';
+?>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/global-functions.js"></script>
 </body>
 </html>

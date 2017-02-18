@@ -280,7 +280,7 @@ function widgEditor(replacedTextareaID)
 /* Clean pasted content */
 widgEditor.prototype.cleanPaste = function()
 {
-	if (widgAutoClean || confirm("Do you wish to clean the HTML source of the content you just pasted?"))
+	if (widgAutoClean || confirm("¿Le gustaría limpiar el código HTML del texto que acaba de copiar?"))
 	{
 		var matchedHead = "";
 		var matchedTail = "";

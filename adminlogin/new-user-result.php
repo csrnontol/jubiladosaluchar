@@ -32,9 +32,9 @@ if (!$result_type = $_GET['queryresult']) {
     <div class="qm-foot">
         <?php
         if ($result_type === 'success')
-            echo '<a href="../index.php">Ir a la Página Principal</a>';
+            echo '<a href="../index.php" class="_hyperlink">Ir a la Página Principal</a>';
         elseif ($result_type === 'error')
-            echo '<a href="new-user.php">Regresar al formulario de registro</a>';
+            echo '<a href="new-user.php" class="_hyperlink">Regresar al formulario de registro</a>';
         ?>
     </div>
 </div>

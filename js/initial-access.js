@@ -42,10 +42,10 @@ $(document).ready(function () {
 
 
     /*
-     * Reset Pass Form
+     * Reset Pass (Admin Form)
      */
-    var btnResetPass = document.getElementById("btn-resetp");
-    $(btnResetPass).on('click', function () {
+    var btnAdminResetPass = document.getElementById("btn-admin-resetp");
+    $(btnAdminResetPass).on('click', function () {
         if ($(this).hasClass("_btnDisabled")) {
             return false;
         }
@@ -57,6 +57,35 @@ $(document).ready(function () {
             $(this).addClass("_btnDisabled");
             if (inCurPass.value.trim() === '') inCurPass.focus();
             return false;
+        } else if (inPass.value.trim().length < 6) {
+            errorsContainer.innerHTML = 'Ingresar mínimo 6 caracteres para la nueva contraseña.';
+            $(this).addClass("_btnDisabled");
+            return false;
+        } else if (inPass.value.trim() != inRepass.value.trim()) {
+            errorsContainer.innerHTML = 'Las contraseñas no coinciden.';
+            $(this).addClass("_btnDisabled");
+            return false;
+        }
+    });
+
+    /*
+     * Reset Pass (User Form)
+     */
+    var btnResetPass = document.getElementById("btn-resetp");
+    $(btnResetPass).on('click', function () {
+        if ($(this).hasClass("_btnDisabled")) {
+            return false;
+        }
+        var inPass = document.getElementById("in-pass");
+        var inRepass = document.getElementById("in-repass");
+        if (inPass.value.trim() === '' || inRepass.value.trim() === '') {
+            errorsContainer.innerHTML = 'Por favor complete los campos.';
+            $(this).addClass("_btnDisabled");
+            return false;
+        } else if (inPass.value.trim().length < 6) {
+            errorsContainer.innerHTML = 'Ingresar mínimo 6 caracteres para la nueva contraseña.';
+            $(this).addClass("_btnDisabled");
+            return false;
         } else if (inPass.value.trim() != inRepass.value.trim()) {
             errorsContainer.innerHTML = 'Las contraseñas no coinciden.';
             $(this).addClass("_btnDisabled");
@@ -66,6 +95,7 @@ $(document).ready(function () {
     var resetPassFields = document.querySelectorAll(".frm-user-forgot-reset input[type=password]");
     $(resetPassFields).on('input', function () {
         if (this.value.trim().length > 0) {
+            $(btnAdminResetPass).removeClass("_btnDisabled");
             $(btnResetPass).removeClass("_btnDisabled");
         }
     });

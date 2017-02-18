@@ -79,7 +79,7 @@ if (isset($_POST['btn-login'])) {
     }
 }
 ?>
-<div class="main-container main-container-login">
+<div class="_main-container main-container-login">
     <div class="div-special-header" style="width: 600px;">
         <div class="header-title">Iniciar Sesión: Administrador del Sistema</div>
         <div class="header-date"><?php echo strftime("(%d - %B - %Y)"); ?></div>

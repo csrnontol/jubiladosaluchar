@@ -43,6 +43,13 @@
     text-align: center;
     padding: 0 0 5px;
     color: #b05752;
+    font-size: 13px;
+}
+.main-container-login .div-session-error-msg {
+    display: block;
+    text-align: center;
+    color: #b05752;
+    font-size: 13px;
 }
 .fieldset-login-section .login-form--user-name,
 .fieldset-login-section .login-form--password {
@@ -56,8 +63,8 @@
     left: 0;
     top: 8px;
     height: 20px;
-    margin-left: 5px;
-    padding-right: 3px;
+    margin-left: 7px;
+    padding-right: 5px;
     border-right: 2px solid #bfbfbf;
     pointer-events: none;
 }
@@ -74,7 +81,7 @@
     font-size: 16px;
     margin-bottom: 10px;
     color: inherit;
-    padding-left: 44px;
+    padding-left: 45px;
     background-color: #fbfbfb;
 }
 .fieldset-login-section input:focus {
@@ -103,17 +110,50 @@
     color: #696969;
 }
 
+/*** User Login Form ***/
+.sesion-usuario.session-page {
+    position: static;
+    margin: 0 auto;
+}
+.user-session-page > .register-fields {
+    margin: 25px 0 10px;
+}
+.user-session-page .register-fields > h4 {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 5px;
+}
+.user-session-page .register-fields > a i {
+    font-size: inherit;
+}
+
+
+
+/****************************/
 /*** Account Confirmation ***/
+/****************************/
 .account-confirmation--container {
     max-width: 500px;
     margin: 60px auto 0;
+    min-height: 400px;
+}
+.account-confirmation--container .confirmation-message > div {
+    padding: 20px;
+    border: 1px solid transparent;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
+
+
+/***********************/
 /*** Forgot Password ***/
+/***********************/
 .frm-user-forgot-reset {
-    width: 280px;
-    margin: 50px auto 0;
-    padding: 10px 30px;
+    width: 320px;
+    margin: 0 auto;
+    padding: 20px 30px;
     background-color: #f6f6f6;
     -webkit-box-shadow: 0 1px 7px -3px;
     -moz-box-shadow: 0 1px 7px -3px;
@@ -125,7 +165,7 @@
 }
 .frm-user-forgot-reset .str-info {
     font-size: 14px;
-    margin: 5px 0 -10px;
+    margin: 5px 0 5px;
 }
 .frm-user-forgot-reset .div-user-icon > i {
     font-size: 100px;
@@ -158,8 +198,7 @@
     margin-top: 30px;
 }
 .insert-new-item--div-container.nuevo-usuario {
-    width: 800px;
-    margin: 30px auto;
+    margin: 0 auto;
 }
 .nuevo-usuario-section > div,
 .nuevo-usuario-section > main {
@@ -180,10 +219,17 @@
     margin-top: 50px;
 }
 
+/* user mode */
+.nuevo-usuario-section #main-content {
+    float: none;
+    margin: 0 auto;
+}
+
 /*fields*/
 form#frm-nuevo-usuario > div {
     width: 100%;
     font-size: 0;
+    margin-bottom: 10px;
 }
 form#frm-nuevo-usuario > div > div {
     display: inline-block;
@@ -204,7 +250,8 @@ form#frm-nuevo-usuario span[id^=error-] {
     display: block;
     width: 100%;
     padding: 2px 0 5px;
-    height: 25px;
+    min-height: 25px;
+    font-size: 13px;
     text-align: center;
     color: #bd665c;
 }
@@ -213,13 +260,23 @@ form#frm-nuevo-usuario .button-section {
     position: relative;
     text-align: center;
 }
-form#frm-nuevo-usuario .button-section #divbtn-submit-usuario {
-    background-color: #cde2d2;
-    border-color: #bbcabe;
+form#frm-nuevo-usuario .button-section #divbtn-submit-usuario,
+form#frm-nuevo-usuario .button-section #btn-submit-usuario {
+    background-color: #87bb96;
+    /*border-color: #bbcabe;*/
+    color: white;
+    border: none;
+    font-size: 14px;
     width: auto;
     margin: 30px 0 0;
+    padding: 4px 15px 5px;
 }
-form#frm-nuevo-usuario .button-section #divbtn-submit-usuario:hover {
-    background-color: #c4dac9;
-    border-color: #9ebda5;
+form#frm-nuevo-usuario .button-section #divbtn-submit-usuario:hover,
+form#frm-nuevo-usuario .button-section #btn-submit-usuario:hover {
+    background-color: #95c79c;
+    /*border-color: #9ebda5;*/
+}
+form#frm-nuevo-usuario .button-section #divbtn-submit-usuario:active,
+form#frm-nuevo-usuario .button-section #btn-submit-usuario:active {
+    padding: 5px 15px 4px;
 }

@@ -7,112 +7,137 @@
  */
 session_start();
 if (isset($_SESSION['user-id'])) {
-    header('Location: menu.php');
+    header('Location: ../index.php');
     exit();
 }
-include_once '../functions/connection.php';
-$conn = dbconnection();
 require_once '../functions/class.user.php';
 $newUser = new User();
 
-error_reporting(E_ALL ^ E_NOTICE);
-/* define warning type */
-$event_type = $_GET['warning'];
-if (!$event_type)
-    $warning = '';
-else if (!$_POST['btn-login']) {
-    if ($event_type === 'login')
-        $warning = 'Es necesario iniciar sesión para acceder a la página.';
-    else $warning = 'O.O';
-}
+/* check if aditional page code is set (from articulos) */
+if (isset($_GET['post']) && !empty($_GET['post'])) {
+    $request_code = $_GET['post'];
+    $request_code = '?post='.$request_code;
+} else $request_code = '';
 ?>
 <!doctype html>
-<html>
+<html lang="es-PE">
 <head>
     <meta charset="utf-8">
-    <title>Iniciar Sesión - Usuario del Sistema</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iniciar Sesión de Usuario | Jubilados a Luchar</title>
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/master.css">
+    <link rel="stylesheet" type="text/css" href="../css/user-login.css">
 </head>
-<body>
+<body class="body-dark-bg">
 <?php
 include_once '../tools/main-header.php';
 
-$user = $pass = $sesion_error = $missed_pass = '';
-if (isset($_POST['btn-login'])) {
-    $usuario = mysqli_real_escape_string($conn, trim($_POST['usuario-login']));
-    $senha = mysqli_real_escape_string($conn, trim($_POST['password-login']));
+/* validate and do user login */
+$username = $password = $sesion_error = '';
+$username_err = $password_err = '';
+if (isset($_POST['btn-user-login'])) {
+    $username = trim($_POST['in-username']);
+    $password = trim($_POST['in-password']);
+    $errors = 0;
 
-    if (!$usuario)
-        $sesion_error = 'El campo Usuario no debe quedar vacío.';
-    elseif (!$senha) {
-        $user = $usuario;
-        $sesion_error = 'Falta ingresar una Contraseña.';
-    } else {
-        $user = $usuario; $pass = $senha;
-        if (!$newUser->doLogin('admin', $user, $user, $pass)) {
+    if (empty($username)) {
+        $errors++;
+        $username_err = 'El campo usuario no debe quedar vacío. Por favor intente de nuevo.';
+    }
+    if (empty($password)) {
+        $errors++;
+        $password_err = 'Falta ingresar una contraseña. Por favor intente de nuevo.';
+    }
+
+    if ($errors == 0) {
+        if (!$newUser->doLogin('user', $username, $username, $password)) {
             $sesion_error = 'Usuario y/o Contraseña incorrecto(s).';
-            $missed_pass = '<a href="forgotpass.php" class="_hyperlink">¿Olvidó su contraseña?</a>';
         } else {
-            $userstatus = mysqli_query($conn, "SELECT * FROM admin WHERE username = '$user' OR email = '$user'");
-            $userstatus = mysqli_fetch_assoc($userstatus);
-            if ($userstatus['estado'] == 0) {
-                $sesion_error = 'Usuario no activado. Consulte al administrador.';
+            $getuser = $newUser->runQuery("SELECT * FROM user WHERE username = ? OR email = ?");
+            $getuser->bind_param('ss', $username, $username);
+            $getuser->execute();
+            $userresult = $getuser->get_result();
+            $userrow = $userresult->fetch_assoc();
+            if ($userrow['active'] == 0) {
+                $sesion_error = 'Usuario inactivo. Por favor verifique su e-mail o consulte al administrador.';
             } else {
-                $admin_id = $_SESSION['user-id'] = $userstatus['idAdministrador'];
-                $_SESSION['user-name'] = $userstatus['nombres'];
-                $_SESSION['user-username'] = $userstatus['usuario'];
-                $_SESSION['user-picture'] = $userstatus['profile_picture'];
-                $_SESSION['user-type'] = $userstatus['user_type'];
-                $_SESSION['user-master'] = $userstatus['master'];
-
-                /* recording user access report and redirect */
-                $sqlin_access = "INSERT INTO admin_access (idAdministrador, access_date)
-        VALUES ('$admin_id', '$local_date_to_record')";
-                if ($in_access = mysqli_query($conn, $sqlin_access)) {
-                    mysqli_close($conn);
-                    if (isset($_GET['redirect']))
-                        header('Location: ' . $_GET['redirect'] . $request_code);
-                    else
-                        header('Location: menu.php');
-                    exit();
-                }
+                $_SESSION['user-id'] = $userrow['user_id'];
+                $_SESSION['user-name'] = $userrow['name'];
+                $_SESSION['user-surname'] = $userrow['surname'];
+                $_SESSION['user-email'] = $userrow['email'];
+                $_SESSION['user-username'] = $userrow['username'];
+                $_SESSION['user-picture'] = $userrow['picture'];
+                if (isset($_GET['redirect']))
+                    header('Location: ' . $_GET['redirect'] . $request_code);
+                else
+                    header('Location: ../index.php');
+                exit();
             }
         }
     }
 }
 ?>
-<div class="main-container-login">
-    <div class="div-sesion-header bord-box">
-        <div class="div-sesion-header-title">Iniciar Sesión: Usuario del Sistema</div>
-        <div class="div-sesion-header-date"><?php echo strftime("(%d - %B - %Y)"); ?></div>
+<main class="user-session-page">
+    <div class="form--logo-slogan">
+        <div>
+            <a href="../index.php">
+                <img src="../img/logo.png" alt="Logo de la Organización">
+                <h2 class="slogan">jubiladosaluchar.com</h2>
+            </a>
+        </div>
     </div>
-    <div id="login-events"><?php echo $warning; ?></div>
-    <fieldset class="fieldset-login-section radius-5px">
-        <legend class="radius-10px">Iniciar sesión para ingresar al sistema</legend>
-        <form id="admin-login-form" method="post" action="" autocomplete="off">
-            <div id="errors-login-form"><?php echo $sesion_error; ?></div>
-            <label for="usuario-login"><span>Usuario:</span></label>
-            <div class="login-form--user-name">
-                <input type="text" id="usuario-login" name="usuario-login" maxlength="100" value="<?= $user;?>" placeholder="nombre de usuario o e-mail" autofocus>
-                <span><i class="cn user i-user"></i></span>
+    <div class="sesion-usuario session-page _formGrayShadow">
+        <div class="session-container _radius3px">
+            <div class="header">
+                <h3 class="title">Sesión del usuario</h3>
+                <p class="title-text">Inicie sesión y acceda a la zona de usuarios para participar en los temas de interés.</p>
             </div>
-            <label for="password-login"><span>Contraseña:</span></label>
-            <div class="login-form--password">
-                <input type="password" id="password-login" name="password-login" maxlength="15" value="<?= $pass;?>" placeholder="contraseña de usuario">
-                <span><i class="cn key i-key"></i></span>
+            <div class="content">
+                <form id="form-user-login" method="post" class="sesion-fields" action="">
+                    <div class="username-field">
+                        <input type="text" id="in-user-username" name="in-username" value="<?= $username;?>"
+                               title="Ingresar nombre de usuario o e-mail" autofocus
+                               placeholder="nombre de usuario o e-mail">
+                        <input type="hidden" id="hdn-valid-username" value="undef">
+                        <span class="sesion-icons"><i class="fa fa-user fa-fw i-user"></i></span>
+                        <span class="error-username input-fields-value-error"><?= $username_err;?></span>
+                    </div>
+                    <div class="password-field">
+                        <input type="password" id="in-user-password" name="in-password" value="<?= $password;?>"
+                               title="Ingresar contraseña" placeholder="contraseña">
+                        <span class="sesion-icons"><i class="fa fa-key fa-fw i-key"></i></span>
+                        <span class="error-password input-fields-value-error"><?= $password_err;?></span>
+                    </div>
+                    <div class="button-field">
+                        <div class="div-session-error-msg"><?= $sesion_error;?></div>
+                        <button id="btn-user-login" name="btn-user-login" class="_btnUserLogin" value="undef">
+                            <i class="fa fa-sign-in"></i>
+                            <span>Iniciar sesión</span>
+                        </button>
+                        <br>
+                        <a href="forgotpass.php" class="forgotpass _hyperlink">¿Olvidó su contraseña?</a>
+                    </div>
+                </form>
+                <div class="register-fields">
+                    <h4>¿Nuevo aquí?</h4>
+                    <a href="nuevo-usuario.php" class="_hyperlink">
+                        <i class="fa fa-user-plus"></i>
+                        <span>Registrarse ahora</span>
+                    </a>
+                </div>
             </div>
-            <button id="btn-login" name="btn-login">Ingresar</button>
-            <div id="missed-password--div-events"><?= $missed_pass;?></div>
-        </form>
-    </fieldset>
-</div>
+        </div>
+    </div>
+</main>
 <footer class="main-footer no-print-this">
     <div class="content">
         <div class="system-description">
             <hr>
             <div>
-                <span class="version">CRC-Academics 1.0 <span style="margin: 0 5px;">&vert;</span> 2016 &ndash; <?= date("Y");?>, Trujillo - Perú</span>
+                <span class="version">jubiladosaluchar.com <span style="margin: 0 5px;">&vert;</span> 2016 &ndash; <?= date("Y");?>, Trujillo - Perú</span>
                 <div class="sponsors">
                     <span>Compatible con: </span>&nbsp;&nbsp;<span>Chrome <i class="chrome-logo"></i></span>
                     <span>Firefox <i class="firefox-logo"></i></span>
@@ -121,17 +146,13 @@ if (isset($_POST['btn-login'])) {
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
-<script type="text/javascript" src="../js/initial-access.js"></script>
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="../js/global-functions.js"></script>
 <script>
     /* Check if Tag is Empty */
     if ($("#login-events").is(':empty')){
         $("#login-events").css({'margin-bottom': 0});
     }
-    if ($("#errors-login-form").is(':empty')){
-        $("#errors-login-form").css({'padding-bottom': 0, 'padding-top': 0});
-    }
 </script>
 </body>
 </html>
-<?php mysqli_close($conn); ?>

@@ -16,7 +16,7 @@ require_once '../functions/class.user.php';
 $newUser = new User();
 
 $successful = null;
-$user_email = $error_sesion = '';
+$user_email = '';
 if (isset($_POST['btn-forgot'])) {
     $user_email = mysqli_real_escape_string($conn, trim($_POST['in-useremail']));
 

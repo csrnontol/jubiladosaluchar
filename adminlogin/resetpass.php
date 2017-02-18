@@ -16,18 +16,22 @@ require_once '../functions/class.user.php';
 $newUser = new User();
 
 $successful = null;
-$pass = $repass = $curpass = '';
+$input_pass = $repeat_pass = $current_pass = '';
 if (isset($_POST['btn-resetp'])) {
     /* vars for verify current password */
     $sqlget_pass = mysqli_query($conn, "SELECT password FROM admin WHERE admin_id = '$admin_id'");
     $sql_pass = mysqli_fetch_assoc($sqlget_pass);
     $sql_pass = $sql_pass['password'];
     $current_pass = trim($_POST['in-curpass']);
+    $input_pass = trim($_POST['in-pass']);
+    $repeat_pass = trim($_POST['in-repass']);
     /* if passwords matches */
     if (password_verify($current_pass, $sql_pass)) {
-        $input_pass = trim($_POST['in-pass']);
-        $repeat_pass = trim($_POST['in-repass']);
-        if ($input_pass === $repeat_pass) {
+        if (strlen($input_pass) < 6) {
+            $msg = "Ingresar mínimo 6 caracteres para la nueva contraseña.";
+        } elseif ($input_pass != $repeat_pass) {
+            $msg = "Las contraseñas no coinciden.";
+        } else  {
             /* insert new password */
             $new_pass = password_hash($repeat_pass, PASSWORD_DEFAULT);
             $sqlin_newpass = $newUser->runQuery("UPDATE admin SET password = ? WHERE admin_id = ?");
@@ -39,8 +43,6 @@ if (isset($_POST['btn-resetp'])) {
             } else {
                 $msg = "No ha sido posible cambiar la contraseña. Por favor vuelva a intentar.";
             }
-        } else {
-            $msg = "Las contraseñas no coinciden.";
         }
     } else {
         $msg = "Su contraseña actual no coincide.";
@@ -69,14 +71,14 @@ include_once '../tools/main-header.php';
         <?php if (!$successful) { ?>
             <div class="div-fields">
                 <label for="in-pass">Contraseña actual:</label>
-                <input type="password" id="in-curpass" name="in-curpass" maxlength="15" data-key="<?= base64_encode($admin_id);?>" value="<?= $curpass;?>" placeholder="contraseña actual" autofocus>
+                <input type="password" id="in-curpass" name="in-curpass" maxlength="15" value="<?= $current_pass;?>" autofocus>
                 <br>
-                <label for="in-pass">Ingresar contraseña:</label>
-                <input type="password" id="in-pass" name="in-pass" maxlength="15" value="<?= $pass;?>" placeholder="nueva contraseña" style="margin-bottom: 6px">
+                <label for="in-pass">Nueva contraseña:</label>
+                <input type="password" id="in-pass" name="in-pass" maxlength="15" value="<?= $input_pass;?>" style="margin-bottom: 6px">
                 <label for="in-repass">Repetir contraseña:</label>
-                <input type="password" id="in-repass" name="in-repass" maxlength="15" value="<?= $repass;?>" placeholder="repetir contraseña">
+                <input type="password" id="in-repass" name="in-repass" maxlength="15" value="<?= $repeat_pass;?>">
             </div>
-            <button id="btn-resetp" name="btn-resetp" class="_btnDisabled">Restablecer</button>
+            <button id="btn-admin-resetp" name="btn-resetp" class="_btnDisabled">Restablecer</button>
         <?php } ?>
     </form>
 </div>
