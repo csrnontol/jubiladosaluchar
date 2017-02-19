@@ -906,3 +906,50 @@ footer a:hover {
     float: none;
     margin-left: 10px;
 }
+
+
+
+/********************/
+/*** contacto.php ***/
+/********************/
+main .contacto-ubicacion{
+    width: 70%;
+    display: inline-block;
+}
+main .contacto-ubicacion #contactanos{
+    width: 100%;
+
+    float: left;
+}
+main .contacto-ubicacion #contactanos #contact_form{
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    padding: 2%;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+main .contacto-ubicacion #contactanos #contact_form .row{
+
+}
+main .contacto-ubicacion #contactanos #contact_form .row label{
+    float: left;
+    height: 40px;
+
+    vertical-align: center;
+    padding-top: 10px;
+}
+main .contacto-ubicacion #contactanos #contact_form .row input{
+    width:100%;
+}
+main .contacto-ubicacion #contactanos #contact_form .row img{
+
+    width: 50px;
+    height: 40px;
+}
+main .contacto-ubicacion #contactanos #contact_form .row textarea{
+    width: 100%;
+}
+main .contacto-ubicacion #contactanos #contact_form input{
+    align-content: center;
+}

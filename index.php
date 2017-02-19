@@ -15,12 +15,13 @@ session_start();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jubilados a Luchar | Página de inicio</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="tools/slimbox/slimbox.css">
     <script type="text/javascript" src="tools/slimbox/ac-run-active-content.js"></script>
     <script type="text/javascript" src="tools/slimbox/jquery-min-slimbox.js"></script>
     <script type="text/javascript" src="tools/slimbox/slimbox.js"></script>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="tools/slimbox/slimbox.css">
 </head>
 <body class="_bgi">
 <?php
