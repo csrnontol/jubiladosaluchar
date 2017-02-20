@@ -50,7 +50,7 @@ $(document).ready(function () {
             }),
             contentType: 'application/json',
             success: function(data) {
-                commentsMainContainer = document.getElementById("div-comments-list");
+                // commentsMainContainer = document.getElementById("div-comments-list");
                 var createdDiv = document.createElement("div");
                 createdDiv.innerHTML = data;
                 commentsMainContainer.insertBefore(createdDiv, commentsMainContainer.firstChild);
@@ -128,7 +128,48 @@ $(document).ready(function () {
                 commentFormContainer.html('');
             }
         });
-    });
+    })
+
+
+    /*
+     * edit article comment
+     */
+    .on('click', '.edit-comment-links', function () {
+        var cancelEditButtons = $(commentsMainContainer).find(".btn-cancel-edit");
+        cancelEditButtons.click(); // clear all previous requests
+        var commentKey = $(this).closest(".comment-first").data('key');
+        var commentThird = $(this).closest(".comment-third");
+        commentThird.children().hide();
+        var editContainer = commentThird.find(".edit-comment-container");
+        if (editContainer.length > 0) {
+            editContainer.show();
+            return false;
+        }
+        $.ajax({
+            url: 'tools/comments/editArticleComment.php',
+            type: 'POST',
+            data: {
+                step: 'load',
+                key: commentKey
+            },
+            success: function (data) {
+                commentThird.append(data);
+            }
+        })
+    })
+    .on('click', '.btn-cancel-edit', function () {
+        var commentThird = $(this).closest(".comment-third");
+        var editContainer = commentThird.find(".edit-comment-container");
+        var hdnCommentValue = editContainer.find(".hdn-edit-comment-value");
+        var txtCommentValue = editContainer.find(".txt-edit-comment");
+        commentThird.children().show();
+        txtCommentValue.val(hdnCommentValue.val());
+        editContainer.hide();
+    })
+    .on('input', '.txt-edit-comment', function () {
+        var btnEditComment = $(this).closest(".edit-comment-container").find(".btn-edit-comment");
+        btnEditComment.removeClass("_btnDisabled");
+    })
 });
 
 

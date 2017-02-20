@@ -732,7 +732,7 @@ footer a:hover {
     bottom: 115%;
     left: 50%;
     margin-left: -75px;
-    width: 150px;
+    width: 160px;
     cursor: default;
     opacity: 0;
     transition: opacity 1s;
@@ -782,7 +782,7 @@ footer a:hover {
     width: 100%;
     height: 65px;
 }
-.article-comments .comentarios .text-and-button button {
+.article-comments .comentarios button {
     float: right;
     margin-top: 10px;
     padding: 4px 15px;
@@ -830,7 +830,6 @@ footer a:hover {
     font-size: 13px;
 }
 #div-comments-list .comment-third .user-and-date {
-    position: relative;
     background-color: #efefef;
     padding: 3px;
 }
@@ -847,10 +846,23 @@ footer a:hover {
 #div-comments-list .comment-third .rate-reply {
     color: #919191;
 }
-#div-comments-list .comment-third .actions {
+#div-comments-list .comment-third .rate-reply {
+    position: relative;
+}
+#div-comments-list .rate-reply .actions {
     position: absolute;
+    top: 0;
     right: 3px;
-    top: 3px;
+}
+#div-comments-list .rate-reply .actions a {
+    padding: 0 3px;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+#div-comments-list .rate-reply .actions a:hover {
+    background-color: #dadada;
 }
 #div-comments-list .comment-third .comment-body {
     margin: 10px 0;
@@ -898,13 +910,19 @@ footer a:hover {
     float: left;
     width: 75%;
 }
-.article-comments .comment-form .text-and-button .div-buttons {
+.article-comments .comment-form .text-and-button .div-buttons,
+.article-comments .edit-comment-container .div-buttons {
     float: right;
 }
-.article-comments .comment-form .text-and-button button {
+.article-comments .comment-form .text-and-button button,
+.article-comments .edit-comment-container button {
     padding: 3px 15px;
     float: none;
     margin-left: 10px;
+}
+.article-comments .edit-comment-container .txt-edit-comment {
+    width: 100%;
+    height: 65px;
 }
 
 

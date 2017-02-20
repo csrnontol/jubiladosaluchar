@@ -117,6 +117,10 @@ elseif ($do_step === 'record') {
                                 <span class="up-votes"></span><i class="fa fa-thumbs-up"></i>
                                 <span class="down-votes"></span><i class="fa fa-thumbs-down"></i>
                             </span>
+                            <div class="actions">
+                                <a class="edit-comment-links" title="Editar comentario"><i class="fa fa-edit"></i></a>
+                                <a class="delete-comment-links" title="Eliminar comentario"><i class="fa fa-remove"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,15 +139,19 @@ elseif ($do_step === 'record') {
                             <div class="comment-third">
                                 <div class="user-and-date">
                                     <span class="user"><?= $user_name;?></span>
-                                    <span class="date" title="<?= $comment_date;?>"><?= $comment_date_txt;?></span>
+                                    <span class="date" title="<?= $comment_date_txt;?>"><?= $comment_date;?></span>
                                 </div>
                                 <div class="comment-body"><?= $comment_content;?></div>
                                 <div class="rate-reply">
                                     <a class="reply-comment-links" href="javascript:">Responder</a>
                                     <span class="rate-comment">
                                         <span class="up-votes"></span><i class="fa fa-thumbs-up"></i>
-                                <span class="down-votes"></span><i class="fa fa-thumbs-down"></i>
+                                        <span class="down-votes"></span><i class="fa fa-thumbs-down"></i>
                                     </span>
+                                    <div class="actions">
+                                        <a class="edit-comment-links" title="Editar comentario"><i class="fa fa-edit"></i></a>
+                                        <a class="delete-comment-links" title="Eliminar comentario"><i class="fa fa-remove"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

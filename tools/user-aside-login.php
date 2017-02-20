@@ -35,8 +35,8 @@ if (!isset($_SESSION['user-id'])) {
                         <span>Iniciar sesión</span>
                     </button>
                     <br>
-                    <a href="/jubiladosaluchar/userlogin/forgotpass.php" class="forgotpass _hyperlink">¿Olvidó su
-                        contraseña?</a>
+                    <a href="/jubiladosaluchar/userlogin/forgotpass.php"
+                       class="forgotpass _hyperlink">¿Olvidó su contraseña?</a>
                 </div>
             </form>
             <div class="register-fields">

@@ -33,6 +33,9 @@ while ($comments = mysqli_fetch_assoc($get_comments)) {
     $comment_content = $comments['content'];
     $comment_date = convertLastVisitDate($comments['date']);
     $comment_date_txt = convertDateTime($comments['date']);
+    $comment_edited = $comments['edited'] == 1;
+    $comment_deleted = $comments['deleted'] == 1;
+    $comment_timestamp = convertDateTime($comments['timestamp']);
     $user_id = $comments['u_user_id'];
     $user_name = $comments['user_name'];
     $user_username = $comments['user_username'];
@@ -41,6 +44,7 @@ while ($comments = mysqli_fetch_assoc($get_comments)) {
     <div data-key="<?= $comment_id;?>" class="main-comment-div">
         <div class="comment-and-replies">
             <div data-key="<?= $comment_id;?>" class="comment-first">
+
                 <div class="comment-second clearfix">
                     <div class="user-picture">
                         <img src="/jubiladosaluchar/img/user/<?= $user_picture;?>" title="<?= $user_username;?>">
@@ -50,26 +54,35 @@ while ($comments = mysqli_fetch_assoc($get_comments)) {
                             <span class="user"><?= $user_name;?></span>
                             <span class="date" title="<?= $comment_date_txt;?>"><?= $comment_date;?></span>
                             <?php
-                            if ($usersession || $adminsession) {
-                                echo '<div class="actions">';
-                                if ($usersession && $user_id == $_SESSION['user-id']) {
-                                    echo '<a class="edit-comment-links"><i class="fa fa-edit"></i></a>';
-                                }
-                                if ($adminsession || $user_id == $_SESSION['user-id']) {
-                                    echo '<a class="delete-comment-links"><i class="fa fa-remove"></i></a>';
-                                }
-                                echo '</div>';
+                            if ($comment_edited) {
+                                echo '<span title="'.$comment_timestamp.'">[editado]</span>';
                             }
                             ?>
                         </div>
-                        <div class="comment-body"><?= $comment_content;?></div>
-                        <div class="rate-reply" data-onsession="<?= $onsession;?>">
-                            <a class="reply-comment-links" href="javascript:">Responder</a>
-                            <span class="rate-comment">
-                                <span class="up-votes"></span><i class="fa fa-thumbs-up"></i>
-                                <span class="down-votes"></span><i class="fa fa-thumbs-down"></i>
-                            </span>
-                        </div>
+                        <?php if (!$comment_deleted) { ?>
+                            <div class="comment-body"><?= $comment_content;?></div>
+                            <div class="rate-reply" data-onsession="<?= $onsession;?>">
+                                <a class="reply-comment-links" href="javascript:">Responder</a>
+                                <span class="rate-comment">
+                                    <span class="up-votes"></span><i class="fa fa-thumbs-up"></i>
+                                    <span class="down-votes"></span><i class="fa fa-thumbs-down"></i>
+                                </span>
+                                <?php
+                                if ($usersession || $adminsession) {
+                                    echo '<div class="actions">';
+                                    if ($usersession && $user_id == $_SESSION['user-id']) {
+                                        echo '<a class="edit-comment-links" title="Editar comentario"><i class="fa fa-edit"></i></a>';
+                                    }
+                                    if ($adminsession || $user_id == $_SESSION['user-id']) {
+                                        echo '<a class="delete-comment-links" title="Eliminar comentario"><i class="fa fa-remove"></i></a>';
+                                    }
+                                    echo '</div>';
+                                }
+                                ?>
+                            </div>
+                        <?php } else { ?>
+                            <div class="comment-body"><em class="deleted">Comentario eliminado</em></div>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="comment-form"></div>
@@ -91,6 +104,9 @@ while ($comments = mysqli_fetch_assoc($get_comments)) {
                     $rep_comment_content = $comment_replies['content'];
                     $rep_comment_date = convertLastVisitDate($comment_replies['date']);
                     $rep_comment_date_txt = convertDateTime($comment_replies['date']);
+                    $rep_comment_edited = $comment_replies['edited'] == 1;
+                    $rep_comment_deleted = $comment_replies['deleted'] == 1;
+                    $rep_comment_timestamp = convertDateTime($comment_replies['timestamp']);
                     $rep_user_id = $comment_replies['u_user_id'];
                     $rep_user_name = $comment_replies['user_name'];
                     $rep_user_username = $comment_replies['user_username'];
@@ -124,26 +140,35 @@ while ($comments = mysqli_fetch_assoc($get_comments)) {
                                     </span>
                                     <span class="date" title="<?= $rep_comment_date_txt;?>"><?= $rep_comment_date;?></span>
                                     <?php
-                                    if ($usersession || $adminsession) {
-                                        echo '<div class="actions">';
-                                        if ($usersession && $rep_user_id == $_SESSION['user-id']) {
-                                            echo '<a class="edit-comment-links"><i class="fa fa-edit"></i></a>';
-                                        }
-                                        if ($adminsession || $rep_user_id == $_SESSION['user-id']) {
-                                            echo '<a class="delete-comment-links"><i class="fa fa-remove"></i></a>';
-                                        }
-                                        echo '</div>';
+                                    if ($rep_comment_edited) {
+                                        echo '<span title="'.$rep_comment_timestamp.'">[editado]</span>';
                                     }
                                     ?>
                                 </div>
-                                <div class="comment-body"><?= $rep_comment_content;?></div>
-                                <div class="rate-reply" data-onsession="<?= $onsession;?>">
-                                    <a class="reply-comment-links" href="javascript:">Responder</a>
-                                    <span class="rate-comment">
-                                <span class="up-votes"></span><i class="fa fa-thumbs-up"></i>
-                                <span class="down-votes"></span><i class="fa fa-thumbs-down"></i>
-                            </span>
-                                </div>
+                                <?php if (!$rep_comment_deleted) { ?>
+                                    <div class="comment-body"><?= $rep_comment_content;?></div>
+                                    <div class="rate-reply" data-onsession="<?= $onsession;?>">
+                                        <a class="reply-comment-links" href="javascript:">Responder</a>
+                                        <span class="rate-comment">
+                                            <span class="up-votes"></span><i class="fa fa-thumbs-up"></i>
+                                            <span class="down-votes"></span><i class="fa fa-thumbs-down"></i>
+                                        </span>
+                                        <?php
+                                        if ($usersession || $adminsession) {
+                                            echo '<div class="actions">';
+                                            if ($usersession && $rep_user_id == $_SESSION['user-id']) {
+                                                echo '<a class="edit-comment-links" title="Editar comentario"><i class="fa fa-edit"></i></a>';
+                                            }
+                                            if ($adminsession || $rep_user_id == $_SESSION['user-id']) {
+                                                echo '<a class="delete-comment-links" title="Eliminar comentario"><i class="fa fa-remove"></i></a>';
+                                            }
+                                            echo '</div>';
+                                        }
+                                        ?>
+                                    </div>
+                                <?php } else { ?>
+                                    <div class="comment-body"><em class="deleted">Comentario eliminado</em></div>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="comment-form"></div>
