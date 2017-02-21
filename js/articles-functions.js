@@ -139,9 +139,9 @@ $(document).ready(function () {
         cancelEditButtons.click(); // clear all previous requests
         var commentKey = $(this).closest(".comment-first").data('key');
         var commentThird = $(this).closest(".comment-third");
-        commentThird.children().hide();
         var editContainer = commentThird.find(".edit-comment-container");
         if (editContainer.length > 0) {
+            commentThird.children().hide();
             editContainer.show();
             return false;
         }
@@ -153,22 +153,49 @@ $(document).ready(function () {
                 key: commentKey
             },
             success: function (data) {
+                commentThird.children().hide();
                 commentThird.append(data);
             }
-        })
+        });
     })
     .on('click', '.btn-cancel-edit', function () {
         var commentThird = $(this).closest(".comment-third");
+        commentThird.children().show();
         var editContainer = commentThird.find(".edit-comment-container");
         var hdnCommentValue = editContainer.find(".hdn-edit-comment-value");
         var txtCommentValue = editContainer.find(".txt-edit-comment");
-        commentThird.children().show();
         txtCommentValue.val(hdnCommentValue.val());
         editContainer.hide();
+        var btnEditComment = editContainer.find(".btn-edit-comment");
+        $(btnEditComment).addClass("_btnDisabled");
     })
     .on('input', '.txt-edit-comment', function () {
         var btnEditComment = $(this).closest(".edit-comment-container").find(".btn-edit-comment");
-        btnEditComment.removeClass("_btnDisabled");
+        if (this.value.trim().length > 0) {
+            $(btnEditComment).removeClass("_btnDisabled");
+        } else {
+            $(btnEditComment).addClass("_btnDisabled");
+        }
+    })
+    .on('click', '.btn-edit-comment', function () {
+        var commentThird = $(this).closest(".comment-third");
+        var txtCommentValue = commentThird.find(".txt-edit-comment").val();
+        if ($(this).hasClass("_btnDisabled") || txtCommentValue.trim().length == 0) {
+            return false;
+        }
+        var commentKey = $(this).closest(".comment-first").data('key');
+        $.ajax({
+            url: 'tools/comments/editArticleComment.php',
+            type: 'POST',
+            data: {
+                step: 'update',
+                key: commentKey,
+                content: txtCommentValue
+            },
+            success: function (data) {
+                commentThird.html(data);
+            }
+        });
     })
 });
 

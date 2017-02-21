@@ -56,7 +56,7 @@ $allarticles_num = mysqli_num_rows($get_allarticles);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jubilación en el País | Jubilados a Luchar</title>
+    <title>Jubilación en el País &bull; Jubilados a Luchar</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/master.css">
 </head>
