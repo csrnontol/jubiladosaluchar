@@ -98,7 +98,7 @@ if (!isset($_SESSION['user-id'])) {
         </div>
         <div class="user-suggestions">
             <div class="go-articles">
-                <p>No olvide de participar en los <?= $temas_txt;?> dejando sus comentarios.</p>
+                <p><i class="fa fa-bell-o"></i> No olvide de participar en los <?= $temas_txt;?> dejando sus comentarios.</p>
             </div>
         </div>
     </div>

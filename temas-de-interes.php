@@ -140,6 +140,9 @@ echoMainHeader();
         </aside>
     </section>
 </main>
+<!-- dialog windows and overlay -->
+<div class="mastercn-flexible-dialog--container _radius3px" style="display: none"></div>
+<div class="mastercn-dialog-overlay" style="display: none"></div>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/global-functions.js"></script>
 <script type="text/javascript" src="js/articles-functions.js"></script>

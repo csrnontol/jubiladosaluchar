@@ -1,6 +1,8 @@
 /**
  * Created by CYNR on 15/02/2017.
  */
+var mastercnFlexDialogContainer = document.querySelector(".mastercn-flexible-dialog--container");
+var mastercnDialogOverlay = document.querySelector(".mastercn-dialog-overlay");
 $(document).ready(function () {
     /*
      * load default article comments
@@ -197,6 +199,30 @@ $(document).ready(function () {
             }
         });
     })
+
+
+    /*
+     * delete article comment
+     */
+    .on('click', '.delete-comment-links', function () {
+        var commentKey = $(this).closest(".comment-first").data('key');
+        $(mastercnFlexDialogContainer).load('tools/comments/deleteArticleComment.php', {step: 'load', key: commentKey}, function () {
+            $(mastercnFlexDialogContainer).fadeIn(100);
+            $(mastercnDialogOverlay).fadeIn(100);
+        });
+    });
+    $(mastercnFlexDialogContainer).on('click', '.lnk-delete-article-comment', function () {
+        var parentKey = $(this).closest(".mastercn-change-item-status--dialog").data('key');
+        var domElement = $("#div-comments-list").find(".comment-first[data-key='"+parentKey+"']").find(".comment-third");
+        $(domElement).load('tools/comments/deleteArticleComment.php', {step: 'delete', key: parentKey}, function () {
+            $(mastercnFlexDialogContainer).hide();
+            $(mastercnDialogOverlay).fadeOut('fast');
+        });
+    })
+    .on('click', '.close-dialog', function () {
+        $(mastercnFlexDialogContainer).html('').fadeOut('fast');
+        $(mastercnDialogOverlay).fadeOut('fast');
+    });
 });
 
 

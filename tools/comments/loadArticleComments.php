@@ -54,7 +54,7 @@ while ($comments = mysqli_fetch_assoc($get_comments)) {
                             <span class="user"><?= $user_name;?></span>
                             <span class="date" title="<?= $comment_date_txt;?>"><?= $comment_date;?></span>
                             <?php
-                            if ($comment_edited) {
+                            if ($comment_edited && !$comment_deleted) {
                                 echo '<span title="'.$comment_timestamp.'">[editado]</span>';
                             }
                             ?>
@@ -140,7 +140,7 @@ while ($comments = mysqli_fetch_assoc($get_comments)) {
                                     </span>
                                     <span class="date" title="<?= $rep_comment_date_txt;?>"><?= $rep_comment_date;?></span>
                                     <?php
-                                    if ($rep_comment_edited) {
+                                    if ($rep_comment_edited && !$rep_comment_deleted) {
                                         echo '<span title="'.$rep_comment_timestamp.'">[editado]</span>';
                                     }
                                     ?>

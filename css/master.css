@@ -34,6 +34,27 @@
     -moz-box-shadow: 0 0 20px 0 #2e2e2e;
     box-shadow: 0 0 20px 0 #2e2e2e;
 }
+.mastercn-flexible-dialog--container {
+    display: table;
+    padding: 0;
+    position: fixed;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    z-index: 101;
+    -webkit-transform: translate(-50%, -51%);
+    -moz-transform: translate(-50%, -51%);
+    -ms-transform: translate(-50%, -51%);
+    -o-transform: translate(-50%, -51%);
+    transform: translate(-50%, -51%);
+    overflow: hidden;
+    background-color: #f9f9f9;
+    -webkit-box-shadow: 0 0 20px 0 #2e2e2e;
+    -moz-box-shadow: 0 0 20px 0 #2e2e2e;
+    box-shadow: 0 0 20px 0 #2e2e2e;
+}
 .mastercn-change-item-status--dialog .dheader {
     width: 100%;
     text-align: center;
@@ -58,6 +79,9 @@
     display: -moz-flex;
     justify-content: center;
 }
+.mastercn-flexible-dialog--container .mastercn-change-item-status--dialog .dbody {
+    padding: 5px;
+}
 .mastercn-change-item-status--dialog .dbody .div-icon {
     width: 70px;
     height: 70px;
@@ -70,6 +94,11 @@
     float: left;
     width: 300px;
     height: 70px;
+}
+.mastercn-flexible-dialog--container .mastercn-change-item-status--dialog .dbody .div-content {
+    float: none;
+    width: auto;
+    height: auto;
 }
 .mastercn-change-item-status--dialog .dfoot {
     display: inline-block;
@@ -409,6 +438,13 @@ body._bgi > .main-header:after {
 
 .session-container .user-suggestions {
     margin-top: 30px;
+}
+.session-container .user-suggestions .go-articles a,
+.session-container .user-suggestions .go-articles i {
+    color: #70a994;
+}
+.session-container .user-suggestions .go-articles a:hover {
+    text-decoration: underline;
 }
 
 
@@ -866,6 +902,9 @@ footer a:hover {
 }
 #div-comments-list .comment-third .comment-body {
     margin: 10px 0;
+}
+#div-comments-list .comment-third .comment-body .deleted {
+    color: #9a9a9a;
 }
 #div-comments-list .comment-third .rate-reply a {
     color: inherit;

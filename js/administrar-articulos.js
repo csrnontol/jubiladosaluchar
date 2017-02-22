@@ -22,7 +22,7 @@ $(document).ready(function () {
     });
     $(mastercnDialogContainer).on('click', '.change-article-status', function () {
         var parentKey = $(this).closest(".mastercn-change-item-status--dialog").data('key');
-        var domElement = $(".article-row[data-key='"+parentKey+"'").find(".article-status-links");
+        var domElement = $(".article-row[data-key='"+parentKey+"']").find(".article-status-links");
         $(domElement).load('articulos/changeArticleStatus.php', {step: 'record', key: parentKey}, function () {
             $(mastercnDialogContainer).hide();
             $(mastercnDialogOverlay).fadeOut('fast');
@@ -31,7 +31,7 @@ $(document).ready(function () {
     .on('click', '.close-dialog', function () {
         $(mastercnDialogContainer).fadeOut('fast');
         $(mastercnDialogOverlay).fadeOut('fast');
-    })
+    });
 });
 
 

@@ -23,6 +23,7 @@ $article = $res->fetch_assoc();
 $article_title = $article['title'];
 $article_content = $article['content'];
 $article_source = $article['source'];
+$article_source = str_replace('<br>', "\n", $article_source);
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -32,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $in_article_title = trim($_POST['in-title']);
     $in_article_content = trim($_POST['txt-content']);
     $in_article_source = trim($_POST['txt-source']);
+    $in_article_source = preg_replace('/\r\n|\r|\n/', '<br>', $in_article_source);
 
     /* insert data */
     $stmt = $newDatabase->prepare("UPDATE article SET admin_id = ?, title = ?, content = ?, source = ?
