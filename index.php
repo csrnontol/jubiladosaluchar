@@ -27,28 +27,33 @@ session_start();
 <?php
 include_once 'tools/main-header.php';
 echoMainHeader();
+include_once 'tools/menu-and-user-login.php';
 ?>
 <main class="_main-container index-main-section">
     <section class="content-mainsection organizacion-sesion">
-        <div class="organizacion">
+        <div class="organizacion clear-content-div">
+            <div class="index-quote">
+                <q>No hay mayor placer que el que nos da un trabajo bien hecho.
+                    Es momento de relajarse, porque todo lo que pudiste hacer por los demás lo realizaste con creces.</q>
+                &ndash; <em>Anónimo</em>
+            </div>
             <div id="div-organizacion" class="org_secciones">
-                <div class="info">
-                    <h3>LA ORGANIZACIÓN</h3>
+                <div class="info intro">
                     <p>
-                        Organización sin fines de lucro, conformado por todo jubilado, que desee una pensión digna o sea
-                        buscar soluciones a la problemática de los jubilados del Perú.
+                        <strong>Jubilados a Luchar.</strong>
+                        Organización sin fines de lucro, conformado por todo jubilado que desee una pensión digna y buscar
+                        soluciones a la problemática de los jubilados del Perú.
                     </p>
                 </div>
-                <img src="img/organizacion.png" >
             </div>
             <div id="div-mision" class="org_secciones">
                 <div class="info">
                     <h3>NUESTRA MISIÓN</h3>
                     <p>
-                        Es luchar por lograr que los jubilados pongamos nuestros esfuerzos en lograr una pensión Digna,
+                        Luchamos por lograr que los jubilados pongamos nuestros esfuerzos en lograr una pensión digna,
                         y que través del tiempo aumente conforme aumenta el costo de vida. Lo cual hace que los jubilados
-                        estemos organizados.  Y esta es la parte importante de la Misión, la organización de los jubilados
-                        del Perú. Ya que la pensión en el Perú, es antihumana, vergonzante.
+                        estemos organizados. Y esta es la parte importante de la Misión, la organización de los jubilados
+                        del Perú.
                     </p>
                 </div>
                 <img src="img/mision.png" >
@@ -65,7 +70,7 @@ echoMainHeader();
         </div>
         <aside class="sesion-usuario">
             <?php
-            include_once 'tools/user-aside-login.php';
+            include_once 'tools/aside-user-login.php';
             ?>
         </aside>
     </section>
@@ -78,79 +83,73 @@ echoMainHeader();
                     <a href="img/galeria/01.png" rel="lightbox">
                         <img src="img/galeria/01.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Foto del recuerdo. 06-94.</span>
                 </div>
                 <div>
                     <a href="img/galeria/02.png" rel="lightbox">
                         <img src="img/galeria/02.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Izamiento del Pabellón Nacional - C.D. Chicago.</span>
                 </div>
                 <div>
                     <a href="img/galeria/03.png" rel="lightbox">
                         <img src="img/galeria/03.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Ceremonia en el Complejo Deportivo Chicago.</span>
                 </div>
-            </div>
-            <div class="grupo-fotos">
                 <div>
                     <a href="img/galeria/04.png" rel="lightbox">
                         <img src="img/galeria/04.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Reunión de colegas jubilados.</span>
                 </div>
                 <div>
                     <a href="img/galeria/05.png" rel="lightbox">
                         <img src="img/galeria/05.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Reunión de colegas jubilados.</span>
                 </div>
                 <div>
                     <a href="img/galeria/06.png" rel="lightbox">
                         <img src="img/galeria/06.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Foto del recuerdo. Jubilados reunidos.</span>
                 </div>
-            </div>
-            <div class="grupo-fotos">
                 <div>
                     <a href="img/galeria/07.png" rel="lightbox">
                         <img src="img/galeria/07.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Reunión de colegas jubilados.</span>
                 </div>
                 <div>
                     <a href="img/galeria/08.png" rel="lightbox">
                         <img src="img/galeria/08.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Foto del recuerdo. Jubilados reunidos.</span>
                 </div>
                 <div>
                     <a href="img/galeria/09.png" rel="lightbox">
                         <img src="img/galeria/09.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Reunión del Adulto Mayor. P.S. San Martín.</span>
                 </div>
-            </div>
-            <div class="grupo-fotos">
                 <div>
                     <a href="img/galeria/10.png" rel="lightbox">
                         <img src="img/galeria/10.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Reunión del Adulto Mayor. P.S. San Martín.</span>
                 </div>
                 <div>
                     <a href="img/galeria/11.png" rel="lightbox">
                         <img src="img/galeria/11.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Reunión del Adulto Mayor. P.S. San Martín.</span>
                 </div>
                 <div>
                     <a href="img/galeria/12.png" rel="lightbox">
                         <img src="img/galeria/12.png" />
                     </a>
-                    <span>Descripción 1 : Todos reunidos.</span>
+                    <span>Reunión del Adulto Mayor. P.S. San Martín.</span>
                 </div>
             </div>
         </div>
@@ -161,5 +160,22 @@ include_once 'tools/main-footer.php';
 ?>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/global-functions.js"></script>
+<script>
+    var wdwWidth = $(window).width();
+    if (wdwWidth < 600) {
+        var imgs = $(".grupo-fotos").find("a");
+        imgs.attr({'rel': '', 'onclick': 'return false;'});
+    }
+
+    $(window).resize(function () {
+        var wdwWidth = $(window).width();
+        var imgs = $(".grupo-fotos").find("a");
+        if (wdwWidth < 600) {
+            imgs.attr({'rel': '', 'onclick': 'return false;'});
+        } else {
+            imgs.attr({'rel': 'lightbox', 'onclick': ''});
+        }
+    });
+</script>
 </body>
 </html>

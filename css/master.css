@@ -168,7 +168,7 @@ body._bgi > .main-header:after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 150%;
+    height: 170%;
     background-image: url("../img/glasses-on-old-book.jpg");
     background-size: 100%;
     opacity: 0.1;
@@ -179,7 +179,7 @@ body._bgi > .main-header:after {
     /*padding: 15px;*/
 }
 .main-header .main-logo a,
-.main-header .main-menu a {
+.div-main-menu .main-menu a {
     display: block;
     text-decoration: none;
 }
@@ -192,7 +192,7 @@ body._bgi > .main-header:after {
     display: inline-block;
 }
 .main-header .main-logo,
-.main-header .main-menu {
+.div-main-menu .main-menu {
     text-align: center;
 }
 .main-logo > div .slogan {
@@ -205,10 +205,10 @@ body._bgi > .main-header:after {
     color: #9c9c9c;
 }
 
-.main-header .main-menu {
-    margin: 30px 0;
+.div-main-menu .main-menu {
+    margin: 30px 0 15px;
 }
-.main-header .main-menu a {
+.div-main-menu .main-menu a {
     color: #9a6f4d;
     padding: 5px 15px;
     border-bottom: 2px solid transparent;
@@ -219,10 +219,10 @@ body._bgi > .main-header:after {
     -o-transition: border-color .5s;
     transition: border-color .5s;
 }
-.main-header .main-menu a:hover {
+.div-main-menu .main-menu a:hover {
     border-color: #926b48;
 }
-.main-header .main-menu a.active {
+.div-main-menu .main-menu a.active {
     border-color: #70a994;
 }
 .main-menu > div > div {
@@ -231,6 +231,87 @@ body._bgi > .main-header:after {
 }
 .main-menu > div > div:last-child {
     margin-right: 0;
+}
+
+/***************************/
+/*** session inside menu ***/
+/***************************/
+.session-inside-menu {
+    display: none;
+    text-align: center;
+}
+.session-inside-menu.active,
+.div-main-menu.active {
+    display: none;
+}
+.session-inside-menu .div-login-register,
+.session-inside-menu .list-login-register {
+    display: inline-block;
+}
+.session-inside-menu .list-login-register {
+    list-style-type: none;
+}
+.list-login-register li {
+    float: left;
+    text-align: left;
+    margin-right: 15px;
+}
+.list-login-register li a {
+    display: block;
+    padding: 5px 10px;
+    color: inherit;
+    background-color: #a5cbe4;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.session-inside-menu .div-user-loggedin {
+    display: inline-block;
+    margin: 10px 0;
+}
+.div-user-loggedin > div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.div-user-loggedin .picture-names {
+    font-family: 'OpenSansSemibold', Helvetica, sans-serif;
+}
+.div-user-loggedin .picture-names img,
+.div-user-loggedin .picture-names span {
+    vertical-align: middle;
+}
+.div-user-loggedin .picture-names img {
+    width: 30px;
+    height: 30px;
+}
+.div-user-loggedin .user-controls > div {
+    float: left;
+    margin-right: 15px;
+}
+
+/*** toogle menu link ***/
+#toggle-menu-and-login {
+    display: none;
+    background-color: #555555;
+    color: white;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    margin: 15px 0;
+}
+#toggle-menu-and-login .link-txt {
+    font-family: 'OpenSansSemibold', Helvetica, sans-serif;
+    line-height: 35px;
+}
+#toggle-menu-and-login .link-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#toggle-menu-and-login .link-icon i {
+    font-size: 35px;
 }
 
 
@@ -303,7 +384,8 @@ body._bgi > .main-header:after {
     padding: 10px 20px 20px;
 }
 .sesion-usuario .session-container,
-.div-articles-list {
+.div-articles-list,
+.clear-content-div {
     border: 1px solid #efeae6;
     background-color: #f9f9f9;
 }
@@ -455,7 +537,7 @@ body._bgi > .main-header:after {
 .content-mainsection {
     position: relative;
     width: 100%;
-    margin: 0 0 30px;
+    margin: 30px 0;
 }
 
 
@@ -578,11 +660,11 @@ footer a:hover {
     padding: 25px 10px 15px;
     overflow: auto;
     border-radius: 3px;
-    background: #af8053;
-    background: -webkit-linear-gradient(left top, lightgoldenrodyellow, #af8053);
-    background: -o-linear-gradient(bottom right, lightgoldenrodyellow, #af8053);
-    background: -moz-linear-gradient(bottom right, lightgoldenrodyellow, #af8053);
-    background: linear-gradient(to bottom right, lightgoldenrodyellow, #af8053);
+    /*background: #af8053;*/
+    /*background: -webkit-linear-gradient(left top, lightgoldenrodyellow, #af8053);*/
+    /*background: -o-linear-gradient(bottom right, lightgoldenrodyellow, #af8053);*/
+    /*background: -moz-linear-gradient(bottom right, lightgoldenrodyellow, #af8053);*/
+    /*background: linear-gradient(to bottom right, lightgoldenrodyellow, #af8053);*/
 }
 .org_secciones h3{
     width: 50%;
@@ -590,7 +672,7 @@ footer a:hover {
 }
 .org_secciones p{
     float: left;
-    text-align: justify;
+    /*text-align: justify;*/
 }
 .org_secciones img{
     width: 130px;
@@ -601,6 +683,13 @@ footer a:hover {
     box-sizing: border-box;
 
 }
+.index-quote {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0;
+    color: #9c9c9c;
+}
 .info{
     /*border:2px solid;*/
     overflow: auto;
@@ -608,11 +697,15 @@ footer a:hover {
     float:left;
     padding: 15px;
 }
+.info.intro {
+    width: 100%;
+}
 
 #galeria-contenedor h1 {
     color: #70a994;
     font-size: 20px;
     padding: 5px;
+    text-transform: uppercase;
 }
 #galeria-contenedor #linea {
     width: 100%;
@@ -626,13 +719,13 @@ footer a:hover {
     float: left;
     width: 32%;
     /*height: 235px;*/
-    margin: 5px 2% 5px 0;
+    margin: 10px 2% 10px 0;
     background: gainsboro;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-.grupo-fotos div:last-child {
+.grupo-fotos div:nth-child(3n+0) {
     margin-right: 0;
 }
 .grupo-fotos:after {
@@ -712,6 +805,9 @@ footer a:hover {
 }
 .div-articles-list a {
     display: block;
+}
+.div-articles-list.secondary-list {
+    display: none;
 }
 
 /* share article buttons */

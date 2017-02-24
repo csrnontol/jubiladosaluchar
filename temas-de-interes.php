@@ -59,11 +59,13 @@ $allarticles_num = mysqli_num_rows($get_allarticles);
     <title>Jubilación en el País &bull; Jubilados a Luchar</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body class="_bgi">
 <?php
 include_once 'tools/main-header.php';
 echoMainHeader();
+include_once 'tools/menu-and-user-login.php';
 ?>
 <main class="_main-container articulos-main-section">
     <section class="content-mainsection article-sesion">
@@ -81,6 +83,16 @@ echoMainHeader();
                     </div>
                 </div>
             </article>
+            <div class="div-articles-list secondary-list">
+                <h4>Otras publicaciones: <?= $allarticles_num; ?></h4>
+                <?php
+                while ($allarticles = mysqli_fetch_assoc($get_allarticles)) {
+                    $article_code = base64_encode($allarticles['article_id']);
+                    $article_title = $allarticles['title'];
+                    echo '<a href="'.$_SERVER['PHP_SELF'].'?post='.$article_code.'"> '. $article_title .'</a>';
+                }
+                ?>
+            </div>
             <div class="div-share-article">
                 <div>
                     <h4>Compartir este artículo: </h4>
@@ -126,10 +138,11 @@ echoMainHeader();
             </section>
         </div>
         <aside class="sesion-usuario">
-            <?php include_once 'tools/user-aside-login.php'; ?>
+            <?php include_once 'tools/aside-user-login.php'; ?>
             <div class="div-articles-list">
                 <h4>Otras publicaciones: <?= $allarticles_num; ?></h4>
                 <?php
+                mysqli_data_seek($get_allarticles, 0);
                 while ($allarticles = mysqli_fetch_assoc($get_allarticles)) {
                     $article_code = base64_encode($allarticles['article_id']);
                     $article_title = $allarticles['title'];

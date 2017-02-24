@@ -16,7 +16,7 @@ if (!isset($_SESSION['user-id'])) {
         </div>
         <div class="content">
             <form id="form-user-login" class="sesion-fields" method="post"
-                  action="/jubiladosaluchar/userlogin/login.php?redirect=<?= $_SERVER['PHP_SELF']; ?>">
+                  action="/jubiladosaluchar/userlogin/login.php?redirect=<?= $_SERVER['PHP_SELF'];?>">
                 <div class="username-field">
                     <input type="text" id="in-user-username" title="Ingresar nombre de usuario o e-mail"
                            placeholder="nombre de usuario o e-mail">

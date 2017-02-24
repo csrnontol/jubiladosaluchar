@@ -93,6 +93,17 @@ $(document).ready(function () {
             }
         });
     });
+
+
+    /*
+     * Show/hide main menu
+     */
+    $("#toggle-menu-and-login").on('click', function () {
+        var divMainMenu = document.getElementsByClassName("div-main-menu")[0];
+        var divSessionInside = document.getElementsByClassName("session-inside-menu")[0];
+        $(divMainMenu).toggleClass("active");
+        $(divSessionInside).toggleClass("active");
+    });
 });
 
 

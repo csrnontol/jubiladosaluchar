@@ -51,7 +51,7 @@ echoMainHeader();
             </div>
         </div>
         <aside class="sesion-usuario">
-            <?php include_once 'tools/user-aside-login.php'; ?>
+            <?php include_once 'tools/aside-user-login.php'; ?>
         </aside>
     </section>
 </main>

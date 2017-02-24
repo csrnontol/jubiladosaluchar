@@ -94,20 +94,9 @@ include_once '../tools/main-header.php';
         <?php } ?>
     </form>
 </div>
-<footer class="main-footer no-print-this">
-    <div class="content">
-        <div class="system-description">
-            <hr>
-            <div>
-                <span class="version">jubiladosaluchar.com <span style="margin: 0 5px;">&vert;</span> 2016 &ndash; <?= date("Y");?>, Trujillo - Perú</span>
-                <div class="sponsors">
-                    <span>Compatible con: </span>&nbsp;&nbsp;<span>Chrome <i class="chrome-logo"></i></span>
-                    <span>Firefox <i class="firefox-logo"></i></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+<?php
+include_once '../tools/main-footer.php';
+?>
 <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="../js/initial-access.js"></script>
 </body>
