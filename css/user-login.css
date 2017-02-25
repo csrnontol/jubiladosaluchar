@@ -198,7 +198,7 @@
     margin-top: 30px;
 }
 .insert-new-item--div-container.nuevo-usuario {
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 .nuevo-usuario-section > div,
 .nuevo-usuario-section > main {

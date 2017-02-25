@@ -5,6 +5,7 @@
  * Date: 12/02/2017
  * Time: 23:46
  */
+session_start();
 ?>
 <!doctype html>
 <html lang="es-PE">
@@ -22,6 +23,7 @@
 <?php
 include_once 'tools/main-header.php';
 echoMainHeader();
+include_once 'tools/menu-and-user-login.php';
 ?>
 <main class="_main-container">
     <section class="content-mainsection contacto-form">

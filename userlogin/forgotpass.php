@@ -59,6 +59,7 @@ if (isset($_POST['btn-forgot'])) {
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/master.css">
     <link rel="stylesheet" type="text/css" href="../css/user-login.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 </head>
 <body class="body-dark-bg">
 <?php

@@ -30,6 +30,7 @@ if (isset($_GET['post']) && !empty($_GET['post'])) {
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/master.css">
     <link rel="stylesheet" type="text/css" href="../css/user-login.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 </head>
 <body class="body-dark-bg">
 <?php

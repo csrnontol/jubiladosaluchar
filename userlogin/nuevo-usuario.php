@@ -122,6 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/master.css">
     <link rel="stylesheet" type="text/css" href="../css/user-login.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 </head>
 <body>
 <?php
@@ -175,6 +176,7 @@ echoMainHeader();
                         <button type="submit" id="btn-submit-usuario" class="_thin-btn _radius3px"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;<span>Crear Cuenta</span></button>
                     </div>
                 </form>
+                <div style="text-align: center">¿Ya tiene una cuenta? <a href="login.php" class="_hyperlink">Inicie sesión</a></div>
             </div>
         </main>
     </section>

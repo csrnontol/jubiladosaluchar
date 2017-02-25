@@ -22,10 +22,10 @@
         </div>
         <div class="footer-contact">
             <h3><span>Contacto Oficial</span></h3>
-            <p><a href="mailto:jubiladosaluchar@gmail.com">E-mail: jubiladosaluchar@gmail.com</a></p>
-            <p><span>Teléfono: 044-607456</span></p>
-            <p><span>Celular: 948856963</span></p>
-            <p><span>Dirección: José Gálvez 707, Chicago - Trujillo - Perú</span></p>
+            <p><a href="mailto:jubiladosaluchar@gmail.com"><b>E-mail:</b> jubiladosaluchar@gmail.com</a></p>
+            <p><span><b>Teléfono:</b> 044-607456</span></p>
+            <p><span><b>Celular:</b> 948856963</span></p>
+            <p><span><b>Dirección:</b> José Gálvez 707, Chicago - Trujillo - Perú</span></p>
         </div>
         <div class="footer-navigation">
             <div class="footer-links-holder">

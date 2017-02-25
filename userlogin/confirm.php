@@ -56,10 +56,12 @@ if ($search->execute() && $result->num_rows > 0) {
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/master.css">
     <link rel="stylesheet" type="text/css" href="../css/user-login.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 </head>
 <body>
 <?php
 include_once '../tools/main-header.php';
+echoFormLogo();
 ?>
 <div class="account-confirmation--container">
     <div class="confirmation-message">

@@ -20,6 +20,10 @@ session_start();
     <link rel="stylesheet" type="text/css" href="../css/basics.css">
 </head>
 <body>
+<?php
+include_once '../tools/main-header.php';
+echoFormLogo();
+?>
 <div class="query-message--container <?= $result;?>">
     <h3 class="qm-head">Restablecimiento de Contraseña</h3>
     <div class="qm-body" style="text-align: center;">

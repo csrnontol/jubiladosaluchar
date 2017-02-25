@@ -153,6 +153,9 @@ include_once 'tools/menu-and-user-login.php';
         </aside>
     </section>
 </main>
+<?php
+include_once 'tools/main-footer.php';
+?>
 <!-- dialog windows and overlay -->
 <div class="mastercn-flexible-dialog--container _radius3px" style="display: none"></div>
 <div class="mastercn-dialog-overlay" style="display: none"></div>
