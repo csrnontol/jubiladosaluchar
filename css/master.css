@@ -154,6 +154,12 @@
     z-index: 10;
 }
 
+.loading-request--gif {
+    height: 25px;
+    background-size: auto 10px;
+    background: url("../img/loading-progress-bar.gif") no-repeat center center;
+}
+
 
 
 /*******************/
@@ -1068,44 +1074,55 @@ footer a:hover {
 /********************/
 /*** contacto.php ***/
 /********************/
-main .contacto-ubicacion{
+.contacto-ubicacion {
     width: 705px;
-    display: inline-block;
 }
-main .contacto-ubicacion #contactanos{
-    width: 100%;
-
-    float: left;
+.contacto-ubicacion #contactanos {
 }
-main .contacto-ubicacion #contactanos #contact_form{
-    width: 100%;
-    justify-content: center;
-    align-content: center;
-    padding: 2%;
-    background-color: lightgrey;
-    border-radius: 5px;
+#contactanos .contact-title {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #e4e4e4;
+    color: #b7b7b7;
+    -webkit-box-shadow: 0 1px 1px white;
+    -moz-box-shadow: 0 1px 1px white;
+    box-shadow: 0 1px 1px white;
 }
-main .contacto-ubicacion #contactanos #contact_form .row{
-
+.contacto-ubicacion #contactanos #contact_form {
+    padding: 25px;
 }
-main .contacto-ubicacion #contactanos #contact_form .row label{
-    float: left;
-    height: 40px;
-
-    vertical-align: center;
+.contacto-ubicacion #contactanos #contact_form .row {
+    margin: 30px 0;
+}
+.contacto-ubicacion #contactanos #contact_form .row.div-button {
+    text-align: center;
+}
+.contacto-ubicacion #contactanos #contact_form .row label {
+    line-height: 25px;
     padding-top: 10px;
+    color: #868686;
 }
-main .contacto-ubicacion #contactanos #contact_form .row input{
-    width:100%;
+#contact_form .row label span {
+    color: #c3c3c3;
+    font-family: 'OpenSansRegular', Helvetica, sans-serif;
+    margin-left: 10px;
 }
-main .contacto-ubicacion #contactanos #contact_form .row img{
-
-    width: 50px;
+#contact_form .row label i {
+    padding: 0 10px 0 15px;
+    color: #959595;
+    width: 34px;
+}
+.contacto-ubicacion #contactanos #contact_form .row input {
+    width: 100%;
     height: 40px;
 }
-main .contacto-ubicacion #contactanos #contact_form .row textarea{
+.contacto-ubicacion #contactanos #contact_form .row textarea{
     width: 100%;
 }
-main .contacto-ubicacion #contactanos #contact_form input{
-    align-content: center;
+#contact_form .contact-errors {
+    color: #b05752;
+    text-align: center;
+}
+#contact_form .contact-errors > span {
+    display: block;
 }
