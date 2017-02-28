@@ -26,7 +26,7 @@ if (isset($_GET['post']) && !empty($_GET['post'])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Iniciar Sesión de Usuario | Jubilados a Luchar</title>
+    <title>Iniciar Sesión de Usuario &bull; Jubilados a Luchar</title>
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/master.css">
     <link rel="stylesheet" type="text/css" href="../css/user-login.css">
@@ -90,8 +90,8 @@ if (isset($_POST['btn-user-login'])) {
             </a>
         </div>
     </div>
-    <div class="sesion-usuario session-page _formGrayShadow">
-        <div class="session-container _radius3px">
+    <div class="sesion-usuario session-page main _formGrayShadow">
+        <div class="session-container main _radius3px">
             <div class="header">
                 <h3 class="title">Sesión del usuario</h3>
                 <p class="title-text">Inicie sesión y acceda a la zona de usuarios para participar en los temas de interés.</p>

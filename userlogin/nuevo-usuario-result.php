@@ -15,9 +15,14 @@ session_start();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro de Nuevo Usuario | Jubilados a Luchar</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Nuevo Usuario &bull; Jubilados a Luchar</title>
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/basics.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 <?php
@@ -48,9 +53,12 @@ echoFormLogo();
     if ($result_type == 'success' || $result_type == 'inserted') {
         echo '<a href="../index.php">Ir a la Página Principal</a>';
     } elseif ($result_type == 'error') {
-        echo '<a href="nuevo-usuario.php">Intentar registro nuevamente.</a>';
+        echo '<a href="nuevo-usuario.php">Intentar registro nuevamente</a>';
     } ?>
 </div>
 </div>
+<?php
+include_once '../tools/main-footer.php';
+?>
 </body>
 </html>

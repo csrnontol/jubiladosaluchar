@@ -9,7 +9,7 @@
 <footer class="main-footer">
     <div class="centered clearfix">
         <div class="footer-logo">
-            <img class="logo" src="/jubiladosaluchar/img/logo.png">
+            <img class="logo" src="/jubiladosaluchar/img/logo4.png">
             <div class="social">
                 <a href="https://www.facebook.com/jubilados.aluchar" class="facebook">
                     <svg viewBox="0 0 33 33">

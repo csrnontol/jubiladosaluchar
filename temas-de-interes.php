@@ -95,20 +95,24 @@ include_once 'tools/menu-and-user-login.php';
             </div>
             <div class="div-share-article">
                 <div>
+                    <?php
+                    $share_url = 'http://';
+                    $share_url .= $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?post=' . base64_encode($current_article_id);
+                    ?>
                     <h4>Compartir este artículo: </h4>
                     <ul class="ul-share-article">
                         <li>
-                            <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=">
+                            <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?= $share_url;?>">
                                 <span>Compartir en Facebook</span>
                             </a>
                         </li>
                         <li>
-                            <a class="twitter" href="https://twitter.com/home?status=">
+                            <a class="twitter" href="https://twitter.com/home?status=<?= $share_url;?>">
                                 <span>Compartir en Twitter</span>
                             </a>
                         </li>
                         <li>
-                            <a class="googlep" href="https://plus.google.com/share?url=">
+                            <a class="googlep" href="https://plus.google.com/share?url=<?= $share_url;?>">
                                 <span>Compartir en Google+</span>
                             </a>
                         </li>

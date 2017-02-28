@@ -53,9 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mailBody .= "<b>Nombres:</b> $contact_name<br>";
         $mailBody .= "<b>E-mail:</b> $contact_email<br>";
         $mailBody .= "<b>Mensaje:</b> $contact_message<br>";
-        $mailBody .= "<br><br><br>Atte.:<br>Sistema Web (jubiladosaluchar.com)";
+        $mailBody .= "<br><br><br>Atte.:<br>Sistema Web (jubiladosaluchar.pe)";
         /*send confirmation mail*/
-        if (mail('cormas14@hotmail.com', $mailSubject, $mailBody, implode("\r\n", $mailHeadings))) {
+        if (mail('nontol-cesar@hotmail.com', $mailSubject, $mailBody, implode("\r\n", $mailHeadings))) {
             header('Location: contacto-result.php?result=success');
             exit();
         } else {
@@ -85,9 +85,23 @@ include_once 'tools/menu-and-user-login.php';
 ?>
 <main class="_main-container">
     <section class="content-mainsection contacto-form">
-        <div class="contacto-ubicacion clear-content-div">
+        <div class="_main-content contacto-ubicacion clear-content-div">
+            <div class="div-contact-info">
+                <h2>Información de contacto</h2>
+                <p><strong>Jubilados a Luchar</strong> agradece su disposición de cominicarse con nosotros.
+                    Puede comunicarse a los siguientes teléfonos o en la siguiente dirección:</p>
+                <dl>
+                    <dt>Número de teléfono:</dt>
+                    <dd>044-607456</dd>
+                    <dt>Número de celular:</dt>
+                    <dd>948856963</dd>
+                    <dt>Dirección:</dt>
+                    <dd>José Gálvez 707, Chicago - Trujillo - Perú</dd>
+                </dl>
+            </div>
             <div id="contactanos">
                 <form id="contact_form" action="" method="post">
+                    <p>También puede escribirnos mediante el siguiente formulario:</p>
                     <h2 class="contact-title">Formulario de contacto</h2>
                     <div class="row">
                         <label for="contact-name"><i class="fa fa-user"></i> Nombres: <span>(Requerido)</span></label>
@@ -99,7 +113,7 @@ include_once 'tools/menu-and-user-login.php';
                     </div>
                     <div class="row">
                         <label for="contact-message"><i class="fa fa-pencil"></i> Mensaje: <span>(Requerido)</span></label>
-                        <textarea id="contact-message" class="input" name="txt-message" rows="7" cols="30"></textarea>
+                        <textarea id="contact-message" class="input" name="txt-message" rows="6" maxlength="1500"></textarea>
                     </div>
                     <div class="div-button row">
                         <div class="contact-errors"><?= $contact_errors; ?></div>

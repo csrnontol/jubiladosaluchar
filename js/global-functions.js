@@ -6,9 +6,9 @@ $(document).ready(function () {
     /*
      * Show/hide user session options
      */
-    var divToggleOptions = document.querySelector(".session-container .toggle-options .trigger");
+    var divToggleSessionOptions = document.querySelector(".session-container .toggle-options .trigger");
     var divUserControls = document.getElementById("div-user-controls");
-    $(divToggleOptions).on('click', function () {
+    $(divToggleSessionOptions).on('click', function () {
         if (!$(divUserControls).is(':visible')) {
             $(divUserControls).slideDown('fast');
             $(".user-toggle-icon").removeClass("fa-chevron-down").addClass("fa-chevron-up");
@@ -98,7 +98,8 @@ $(document).ready(function () {
     /*
      * Show/hide main menu
      */
-    $("#toggle-menu-and-login").on('click', function () {
+    var divToggleMenu = document.getElementById("toggle-menu-and-login");
+    $(divToggleMenu).on('click', function () {
         var divMainMenu = document.getElementsByClassName("div-main-menu")[0];
         var divSessionInside = document.getElementsByClassName("session-inside-menu")[0];
         $(divMainMenu).toggleClass("active");
@@ -120,8 +121,7 @@ $(document).ready(function () {
         $(processingGif).fadeIn(100);
         return validateContactForm();
     });
-    var contactFormElemenets = contactForm.elements;
-    $(contactFormElemenets).on('input', function () {
+    $(contactForm).on('input', 'input, textarea', function () {
         if (this.value.trim().length > 0) {
             $(btnSendContact).removeClass("_btnDisabled");
         } else {
@@ -130,6 +130,28 @@ $(document).ready(function () {
         $(this).css('border-color', '');
         contactErrors.innerHTML = '';
     });
+
+    /*
+     * Fix  element while scroll
+     */
+    var menuUserContainer = document.getElementById("menu-and-user-login--container");
+    var menuUserCloneHeight = document.getElementById("menu-and-user-login--clone-height");
+    if (menuUserContainer) {
+        var fromPixels = $(menuUserContainer).offset().top;
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > fromPixels) {
+                if ($(divToggleMenu).is(':visible')) {
+                    $(menuUserContainer).addClass("fixed");
+                    menuUserCloneHeight.style.height = menuUserContainer.offsetHeight + 15 + 'px'; // 15 (margin-top)
+                }
+            }
+            else {
+                //num = $('.menuFlotante').offset().top;
+                $(menuUserContainer).removeClass("fixed");
+                menuUserCloneHeight.style.height = '';
+            }
+        });
+    }
 });
 
 

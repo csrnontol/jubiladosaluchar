@@ -65,7 +65,10 @@ if ($stmt->execute() && $result->num_rows > 0) {
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Restablecer Contraseña de Usuario | Jubilados a Luchar</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restablecer Contraseña de Usuario &bull; Jubilados a Luchar</title>
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/master.css">
     <link rel="stylesheet" type="text/css" href="../css/user-login.css">

@@ -299,6 +299,17 @@ body._bgi > .main-header:after {
 }
 
 /*** toogle menu link ***/
+#menu-and-user-login--container {
+    width: 100%;
+}
+#menu-and-user-login--container.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+#menu-and-user-login--container.fixed #toggle-menu-and-login {
+    margin-top: 0;
+}
 #toggle-menu-and-login {
     display: none;
     background-color: #737373;
@@ -308,9 +319,19 @@ body._bgi > .main-header:after {
     cursor: pointer;
     margin: 15px 0 0;
 }
+#toggle-menu-and-login > img {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+}
 #toggle-menu-and-login .link-txt {
     font-family: 'OpenSansSemibold', Helvetica, sans-serif;
     line-height: 35px;
+}
+#toggle-menu-and-login > img,
+#toggle-menu-and-login .link-txt {
+    display: inline-block;
+    vertical-align: middle;
 }
 #toggle-menu-and-login .link-icon {
     position: absolute;
@@ -1074,22 +1095,32 @@ footer a:hover {
 /********************/
 /*** contacto.php ***/
 /********************/
-.contacto-ubicacion {
-    width: 705px;
-}
 .contacto-ubicacion #contactanos {
 }
-#contactanos .contact-title {
+#contactanos .contact-title,
+.contacto-ubicacion .div-contact-info > h2 {
     text-align: center;
     padding: 10px;
     border-bottom: 1px solid #e4e4e4;
-    color: #b7b7b7;
+    color: #9c9c9c;
     -webkit-box-shadow: 0 1px 1px white;
     -moz-box-shadow: 0 1px 1px white;
     box-shadow: 0 1px 1px white;
 }
-.contacto-ubicacion #contactanos #contact_form {
+.contacto-ubicacion .div-contact-info p,
+.contacto-ubicacion .div-contact-info dl {
+    margin: 15px 0;
+}
+.contacto-ubicacion .div-contact-info dt {
+    font-family: 'OpenSansSemibold', Helvetica, sans-serif;
+    margin: 10px 0 3px;
+}
+.contacto-ubicacion #contactanos #contact_form,
+.contacto-ubicacion .div-contact-info {
     padding: 25px;
+}
+.contacto-ubicacion #contact_form > p {
+    margin: 10px 0;
 }
 .contacto-ubicacion #contactanos #contact_form .row {
     margin: 30px 0;
@@ -1100,7 +1131,7 @@ footer a:hover {
 .contacto-ubicacion #contactanos #contact_form .row label {
     line-height: 25px;
     padding-top: 10px;
-    color: #868686;
+    color: #7d7d7d;
 }
 #contact_form .row label span {
     color: #c3c3c3;
@@ -1114,7 +1145,7 @@ footer a:hover {
 }
 .contacto-ubicacion #contactanos #contact_form .row input {
     width: 100%;
-    height: 40px;
+    height: 37px;
 }
 .contacto-ubicacion #contactanos #contact_form .row textarea{
     width: 100%;

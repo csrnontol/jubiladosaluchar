@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registro de Nuevo Usuario | Jubilados a Luchar</title>
+    <title>Registro de Nuevo Usuario &bull; Jubilados a Luchar</title>
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/master.css">
     <link rel="stylesheet" type="text/css" href="../css/user-login.css">
@@ -173,7 +173,7 @@ echoMainHeader();
                     </div>
                     <div class="button-section">
                         <span class="insert-item--processing-gif"></span>
-                        <button type="submit" id="btn-submit-usuario" class="_thin-btn _radius3px"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;<span>Crear Cuenta</span></button>
+                        <button type="submit" id="btn-submit-usuario" class="_thin-btn _radius3px"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;<span>Crear cuenta</span></button>
                     </div>
                 </form>
                 <div style="text-align: center">¿Ya tiene una cuenta? <a href="login.php" class="_hyperlink">Inicie sesión</a></div>

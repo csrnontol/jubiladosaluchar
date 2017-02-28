@@ -14,8 +14,8 @@ function echoFormLogo() { ?>
     <div class="form--logo-slogan">
         <div>
             <a href="/jubiladosaluchar">
-                <img src="../img/logo.png" alt="Logo de la Organización">
-                <h2 class="slogan">jubiladosaluchar.com</h2>
+                <img src="/jubiladosaluchar/img/logo4.png" alt="Logo de la Organización">
+                <h2 class="slogan">jubiladosaluchar.pe</h2>
             </a>
         </div>
     </div>
@@ -36,7 +36,7 @@ function echoMainHeader() {
         <div class="main-logo">
             <div>
                 <a href="/jubiladosaluchar">
-                    <img src="/jubiladosaluchar/img/logo.png" alt="Logo de la Organización">
+                    <img src="/jubiladosaluchar/img/logo4.png" alt="Logo de la Organización">
                     <h1 class="slogan">Jubilados a Luchar</h1>
                     <h3>... por una pensión digna ...</h3>
                 </a>

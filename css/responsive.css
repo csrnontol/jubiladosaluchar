@@ -11,6 +11,9 @@
     .div-articles-list {
         display: none;
     }
+    .sesion-usuario .session-container.main {
+        display: block;
+    }
     .session-inside-menu, .session-inside-menu.active {
         display: block;
     }
@@ -70,6 +73,11 @@
     }
     footer .centered .footer-logo img.logo {
         padding-top: 0;
+    }
+
+    /* log-in section */
+    .main-container-login {
+        width: 100%;
     }
 }
 
@@ -246,6 +254,17 @@
     .div-articles-list.secondary-list {
         width: 90%;
     }
+
+    /* nuevo usuario */
+    .nuevo-usuario-section > main {
+        width: 90%;
+    }
+    form#frm-nuevo-usuario > div > div {
+        width: 47%;
+    }
+    form#frm-nuevo-usuario > div > div:first-child {
+        margin-right: 6%;
+    }
 }
 
 
@@ -273,24 +292,136 @@
     .div-articles-list.secondary-list {
         width: 100%;
     }
+
+    #div-comments-list .comment-second .user-picture,
+    #div-comments-list .div-comment-replies .comment-second .user-picture,
+    .article-comments .comment-form label,
+    .article-comments .comentarios label {
+        width: 30px;
+    }
+    .article-comments .comment-form label,
+    .article-comments .comentarios label {
+        position: relative;
+        margin-right: 10px;
+    }
+    .article-comments .comment-form label:after,
+    .article-comments .comentarios label:after {
+        position: absolute;
+        content: 'Ud.';
+        left: 5px;
+        bottom: -10px;
+    }
+    .article-comments .comment-form label > span,
+    .article-comments .comentarios label > span {
+        display: none;
+    }
+    #div-comments-list .comment-second .user-picture img,
+    #div-comments-list .div-comment-replies .comment-second .user-picture img,
+    .article-comments .comentarios label img {
+        width: 30px;
+        height: 30px;
+    }
+    #div-comments-list .comment-third,
+    #div-comments-list .div-comment-replies .comment-third,
+    .article-comments .comment-form .text-and-button,
+    .article-comments .comentarios .text-and-button {
+        width: calc(100% - 40px);
+    }
+
+    #div-comments-list .comment-form, #div-comments-list .div-comment-replies {
+        padding-left: 40px;
+    }
+
+    #div-comments-list .comment-third .rate-reply a {
+        margin-right: 10px;
+    }
+    #div-comments-list .rate-reply .actions a {
+        margin-right: 5px !important;
+    }
+
+    .article-comments .comentarios button {
+        margin-top: 3px;
+    }
+    .article-comments .comment-form .text-and-button button,
+    .article-comments .edit-comment-container button,
+    .article-comments .comentarios button {
+        padding: 1px 2px;
+    }
 }
 
 
 @media only screen and (max-width: 420px) {
+    /* index */
     .organizacion-sesion .organizacion .org_secciones img {
         display: none;
     }
     .organizacion-sesion .organizacion .org_secciones .info {
         width: 100%;
     }
+
+    /* articles */
+    .div-share-article h4 {
+        display: block;
+        text-align: center;
+    }
+    .article-container .div-share-article {
+        text-align: center;
+    }
+
+    /* nuevo usuario */
+    form#frm-nuevo-usuario > div > div {
+        width: 80%;
+        display: block;
+        margin: 0 auto !important;
+    }
+    form#frm-nuevo-usuario > div > div.user-email {
+        border-bottom: 1px solid #d8d8d8;
+    }
+    form#frm-nuevo-usuario > div > div.user-username {
+        padding-top: 10px;
+        border-top: 1px solid #f3f3f3;
+    }
+
+    /* query message page */
+    .query-message--container {
+        width: 90%;
+    }
 }
 
+@media only screen and (max-width: 320px) {
+    /* log-in section */
+    .frm-user-forgot-reset {
+        width: 95%;
+        padding: 15px 30px;
+    }
+    .main-container-login .fieldset-login-section {
+        width: 95%;
+    }
+}
 
-@media only screen and (max-width: 750px) {
-
-    /*Contactenos*/
-    main .contacto-ubicacion{
+@media only screen and (max-width: 319px) {
+    /* logo and slogan */
+    .form--logo-slogan {
         width: 100%;
-        display: block;
+    }
+    .sesion-usuario.session-page.main {
+        width: 96%;
+    }
+
+    /* articles */
+    #div-comments-list .comment-second .user-picture,
+    #div-comments-list .div-comment-replies .comment-second .user-picture,
+    .article-comments .comment-form label {
+        display: none;
+    }
+    #div-comments-list .comment-third,
+    #div-comments-list .div-comment-replies .comment-third,
+    .article-comments .comment-form .text-and-button {
+        width: 100%;
+    }
+
+    /* nuevo usuario */
+    .nuevo-usuario-section > main {
+        width: 100%;
     }
 }
